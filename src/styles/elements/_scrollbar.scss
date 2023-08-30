@@ -1,0 +1,25 @@
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $theme-light; /* Track color */
+  border-radius: 5px;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: $theme-dark; /* Thumb color */
+  border-radius: 5px;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken($theme-dark, 10%); /* Thumb color on hover */
+}
+
+/* Firefox scrollbar styles (fallback) */
+/* Note: Firefox doesn't support customizing the thumb color */
+/* It will use the default system scrollbar style */

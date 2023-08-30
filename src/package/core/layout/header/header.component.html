@@ -1,0 +1,36 @@
+<nav class="navbar">
+    <div class="logo">
+        <img src="./../../../../assets/images/swiftbuy.png" class="img-fluid"/>
+    </div>
+    <ul class="nav-links">
+
+        <!-- Search -->
+        <div class="search-container">
+            <input class="search expandright" id="searchright" type="search" placeholder="Search...">
+        </div>
+        <li class="search-icon">
+            <label for="searchright">
+                <fa-icon [icon]="['fas', 'search']" title="Search"></fa-icon>
+            </label>
+        </li>
+
+        <!-- Haburger for small device -->
+        <input type="checkbox" id="hamburger-toggle">
+        <label for="hamburger-toggle" class="hamburger">
+            <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+        </label>
+
+        <!-- Menu items -->
+        <div class="menu">
+            <li class="menu-item">
+                <fa-icon [icon]="['fas', 'heart']" routerLink="wishlist" title="Wishlist"></fa-icon>
+            </li>
+            <li class="menu-item">
+                <fa-icon [icon]="['fas', 'user']" routerLink="login" title="Login"></fa-icon>
+            </li>
+            <li class="menu-item">
+                <fa-icon [icon]="['fas', 'shopping-cart']" routerLink="cart" title="Cart"></fa-icon>
+            </li>
+        </div>
+    </ul>
+</nav>

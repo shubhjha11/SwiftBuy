@@ -1,0 +1,21 @@
+// Import utilities
+@import 'utility/variables';
+@import 'utility/mixins';
+
+// Import base styles
+@import 'base/reset';
+@import 'base/typography';
+
+// Import vendors
+@import 'vendors/bootstrap';
+@import 'vendors/font-awesome';
+
+// Import elements
+@import 'elements/buttons';
+@import 'elements/forms';
+@import 'elements/scrollbar';
+
+// Import component styles
+@import 'components/navbar';
+@import 'components/footer';
+

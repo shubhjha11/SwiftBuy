@@ -1,0 +1,26 @@
+// Import Global Styles
+@import 'src/styles/styles.scss';
+
+.login-page {
+  height: 100vh;
+  @include flex-center;
+  background-color: $dashboard-bg;
+
+  .login-form {
+    text-align: center;
+    width: 400px;
+    background-color: $color--white;
+    border: 1px solid $divider-color;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    @include flex-center(column, center, space-evenly);
+    justify-content: space-evenly;
+
+    .logo {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

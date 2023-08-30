@@ -1,0 +1,20 @@
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  background-color: $accent-color;
+  color: $color--white;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $button-hover-bg;
+  }
+
+  &:disabled {
+    background-color: $divider-color; // Use a muted color for disabled state
+    cursor: not-allowed;
+  }  
+}

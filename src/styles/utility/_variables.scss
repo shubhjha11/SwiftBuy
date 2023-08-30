@@ -1,0 +1,21 @@
+// Basic colors
+$color--white: #ffffff;
+
+// Theme Color Variables
+$theme-light: #f0f0f0; // Adjusted to a softer light gray
+$theme-dark: #3f6766; // Adjusted to your logo's color
+$accent-color: #ffd13c; // Warm yellow as an accent color to match banner background
+$hover-bg-dark: #6b9c6d; // Light green for hover effect on dark theme
+$hover-bg-light: #e0e0e0; // Softer gray for hover effect on light theme
+$dashboard-bg: #f0f0f0; // Adjusted to a consistent soft gray for the dashboard background
+$product-bg: $color--white; // White for the product listings background
+$text-color: #333333; // Dark gray for text and typography
+$button-bg: $theme-dark; // Using the dark theme color for buttons
+$button-hover-bg: #6b9c6d; // Light green for button color on hover
+$button-text: $color--white; // White text on button
+$divider-color: #d1d1d1; // Light gray for borders and dividers
+$banner-heading: #333333;
+$banner-description: #555555;
+
+// Height Variables
+$header-height: 80px;
