@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopularCategoryComponent implements OnInit {
 
+  public categories: any[] = [];
   constructor() { }
 
   ngOnInit(): void {

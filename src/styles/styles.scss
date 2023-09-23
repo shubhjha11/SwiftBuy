@@ -1,21 +1,21 @@
+// Import settings
+@import 'settings/_settings';
+
+// Import generics
+@import 'generic/_generics';
+
 // Import utilities
-@import 'utility/variables';
-@import 'utility/mixins';
+@import 'utility/_utilities';
 
 // Import base styles
-@import 'base/reset';
-@import 'base/typography';
+@import 'object/_objects';
 
 // Import vendors
-@import 'vendors/bootstrap';
-@import 'vendors/font-awesome';
+@import 'vendors/_vendors';
 
 // Import elements
-@import 'elements/buttons';
-@import 'elements/forms';
-@import 'elements/scrollbar';
+@import 'elements/_elements';
 
 // Import component styles
-@import 'components/navbar';
-@import 'components/footer';
+@import 'components/_components';
 

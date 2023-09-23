@@ -11,7 +11,7 @@
   .nav-links {
     display: flex;
     align-items: center;
-    height: 2.5rem;
+    height: 2rem;
 
     #hamburger-toggle, 
     .hamburger {
@@ -26,8 +26,8 @@
     .search-icon {
       color: $theme-dark;
       transition: background-color 0.3s, color 0.3s;
-      height: 2.5rem;
-      width: 2.5rem;
+      height: 2rem;
+      width: 2rem;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -55,6 +55,7 @@
         height: 100%;
         z-index: 10;
         transition-duration: 0.4s;
+        font-size: 0.8rem;
 
         &:focus {
           width: 350px;

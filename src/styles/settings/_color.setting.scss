@@ -1,0 +1,36 @@
+// Basic colors
+$color--white:                      #FFFFFF;
+$color--black:                      #000000;
+$color-extra-lightgrey:             #F9F9F9;
+$color--lightgrey:                  #EAEAEB;
+$color--grey:                       #8F8F95;
+$color--darkgrey:                   #4B4B4F;
+$color--purple:                     #A787F0;
+$color--blue:                       #0066FF;
+$color-darkblue:                    #2980b9;
+
+// Theme Color Variables
+$theme-light: $color-extra-lightgrey; // Adjusted to a softer light gray
+$theme-dark: $color--black; // Adjusted to your logo's color
+
+// Accent Colors
+$accent-primary: #3498db; // A soothing blue for primary accents
+$accent-secondary: $color-darkblue; // A vibrant red for secondary accents
+
+// Hover Effects
+$hover-bg-dark: #333333; // Dark gray for hover effect on dark theme
+$hover-bg-light: #cccccc; // Light gray for hover effect on light theme
+
+// Dashboard and Product Listings
+$dashboard-bg: $theme-light; // Light gray for the dashboard background
+$product-bg: $color--white; // White for the product listings background
+$text-color: #333333; // Dark gray for text and typography
+
+// Button Styles
+$button-bg: $accent-primary; // Use primary accent color for buttons
+$button-hover-bg: $accent-secondary; // Use secondary accent color for button hover
+$button-text: $color--white; // White text on buttons
+
+// Divider and Border Colors
+$divider-color: #cccccc; // Light gray for borders and dividers
+

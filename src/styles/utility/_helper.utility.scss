@@ -1,0 +1,12 @@
+/* Flex Helpers */
+.flex-center {
+  @include flex();
+}
+
+.flex-end {
+  @include flex($align-items: flex-end);
+}
+
+.flex-start {
+  @include flex($align-items: flex-start);
+}

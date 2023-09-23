@@ -3,7 +3,7 @@
 
 .login-page {
   height: 100vh;
-  @include flex-center;
+  @include flex(center, center, row);
   background-color: $dashboard-bg;
 
   .login-form {
@@ -14,7 +14,7 @@
     border-radius: 0.5rem;
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    @include flex-center(column, center, space-evenly);
+    @include flex(center, space-evenly, column);
     justify-content: space-evenly;
 
     .logo {
