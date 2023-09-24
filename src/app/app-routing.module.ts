@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from 'src/package/core/layout/layout.component';
-import { LoginComponent } from 'src/package/modules/authentication/login/login.component';
+import { LoginComponent } from 'src/package/modules/authentication/components/login/login.component';
 import { DashboardModule } from 'src/package/modules/dashboard/dashboard.module';
-import { DashboardComponent } from 'src/package/modules/dashboard/dashboard/dashboard.component';
+import { DashboardComponent } from 'src/package/modules/dashboard/components/dashboard/dashboard.component';
+import { SignupComponent } from 'src/package/modules/authentication/components/signup/signup.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
     ]
   },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: SignupComponent }
 
 ];
 

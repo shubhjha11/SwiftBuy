@@ -10,3 +10,8 @@
 .flex-start {
   @include flex($align-items: flex-start);
 }
+
+/* Text Helpers */
+.text-small {
+  font-size: 0.75rem;
+}

@@ -1,0 +1,48 @@
+<div class="container-xxl">
+  <nav class="navbar justify-content-center">
+    <div class="logo-lg" routerLink="/">
+        <img src="./../../../../assets/images/swiftbuy1.png" class="img-fluid"/>
+    </div>
+  </nav>
+  <div class="login-page">
+    <div class="login-header">
+      <h2>Hello, Please Sign in or
+        <a class="link" routerLink="/register">Create an Account</a>
+      </h2>
+    </div>
+    <div class="login-form">
+      <hr>
+      <form [formGroup]="loginForm">
+        <mat-form-field appearance="fill">
+          <input matInput 
+              placeholder="Email" 
+              name="username" 
+              formControlName="username" 
+              required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input matInput 
+              type="password" 
+              placeholder="Password" 
+              name="password" 
+              formControlName="password" 
+              required>
+        </mat-form-field>
+        <button 
+            mat-button 
+            mat-raised-button 
+            class="w-100 sb-button" 
+            [disabled]="loginForm.invalid">
+            Login
+          </button>
+      </form>
+      <hr>
+      <div>OR</div>
+      <hr>
+      <button mat-button mat-raised-button class="w-100 sb-button">
+        <fa-icon class="mr-2" [icon]="['fab', 'google']"></fa-icon>
+        Login With Google
+      </button>
+    </div>
+  </div>
+</div>
