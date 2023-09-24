@@ -1,5 +1,8 @@
-<h2 class="my-4">Shop By Category 
-  <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+<h2 class="my-4">
+  <a routerLink="./category">
+    Shop By Category
+    <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+  </a>  
 </h2>
 <div class="card-container">
   <div class="card" *ngFor="let category of categories" routerLink="./category/{{category.categoryId}}">

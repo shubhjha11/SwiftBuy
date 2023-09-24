@@ -13,11 +13,11 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', component: DashboardComponent },
-      // { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
-      // { path: 'wishlist', component: WishlistComponent, canActivate: [AuthGuard] },
-      // { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+      // { path: 'cart', component: CartComponent },
+      // { path: 'wishlist', component: WishlistComponent },
+      // { path: 'profile', component: ProfileComponent },
       // { path: 'product/:id', component: ProductDetailsComponent },
-      // { path: 'category/:categoryId', component: CategoryComponent },
+      // { path: 'category/:id', component: CategoryComponent },
     ]
   },
   { path: 'login', component: LoginComponent },

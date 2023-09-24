@@ -4,13 +4,11 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductCardComponent } from './components/product-card/product-card.component';
-import { CarouselBannerComponent } from './components/carousel-banner/carousel-banner.component';
 import { CategoryProductSliderComponent } from './components/category-product-slider/category-product-slider.component';
 
 @NgModule({
   declarations: [
     ProductCardComponent,
-    CarouselBannerComponent,
     CategoryProductSliderComponent,
   ],
   imports: [
@@ -25,7 +23,6 @@ import { CategoryProductSliderComponent } from './components/category-product-sl
     ReactiveFormsModule,
     FormsModule,
     FontAwesomeModule,
-    CarouselBannerComponent,
     CategoryProductSliderComponent,
   ]
 })
