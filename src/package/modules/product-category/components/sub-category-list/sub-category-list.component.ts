@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sub-category-list',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubCategoryListComponent implements OnInit {
 
+  @Input() subCategories: any[] = [];
   constructor() { }
 
   ngOnInit(): void {

@@ -1,21 +1,24 @@
 // Basic colors
 $color--white:                      #FFFFFF;
 $color--black:                      #000000;
-$color-extra-lightgrey:             #F9F9F9;
+$color--extra-lightgrey:            #F9F9F9;
 $color--lightgrey:                  #EAEAEB;
 $color--grey:                       #8F8F95;
 $color--darkgrey:                   #4B4B4F;
 $color--purple:                     #A787F0;
 $color--blue:                       #0066FF;
-$color-darkblue:                    #2980b9;
+$color--darkblue:                   #2980b9;
+
+// Loader Colors
+
 
 // Theme Color Variables
-$theme-light: $color-extra-lightgrey; // Adjusted to a softer light gray
+$theme-light: $color--extra-lightgrey; // Adjusted to a softer light gray
 $theme-dark: $color--black; // Adjusted to your logo's color
 
 // Accent Colors
 $accent-primary: #3498db; // A soothing blue for primary accents
-$accent-secondary: $color-darkblue; // A vibrant red for secondary accents
+$accent-secondary: $color--darkblue; // A vibrant red for secondary accents
 
 // Hover Effects
 $hover-bg-dark: #333333; // Dark gray for hover effect on dark theme
@@ -36,5 +39,5 @@ $link-color: $accent-primary; // Use primary accent color for links
 $link-hover-color: $accent-secondary; // Use secondary accent color for link hover
 
 // Divider and Border Colors
-$divider-color: #cccccc; // Light gray for borders and dividers
+$divider-color: #e9ecef; // Light gray for borders and dividers
 

@@ -1,1 +1,13 @@
-<p>category works!</p>
+<div class="container">
+  <div class="row">
+    <h2 class="my-3">{{ categoryName }}</h2>
+    <!-- left side will be the subcategory -->
+    <div class="col-md-3">
+      <app-sub-category-list [subCategories]="subCategories"></app-sub-category-list>
+    </div>
+    <!-- right side will be the products list -->
+    <div class="col-md-9">
+      <app-product-list [products]="productList"></app-product-list>
+    </div>
+  </div>
+</div>

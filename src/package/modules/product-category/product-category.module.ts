@@ -4,17 +4,21 @@ import { SubCategoryListComponent } from './components/sub-category-list/sub-cat
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CategoryComponent } from './components/category/category.component';
+import { SharedModule } from '../shared/shared.module';
+import { ProductCategoryRoutingModule } from './product-category-routing.module';
 
 
 @NgModule({
   declarations: [
+    CategoryComponent,
     SubCategoryListComponent,
     ProductListComponent,
     ProductDetailsComponent,
-    CategoryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ProductCategoryRoutingModule,
+    SharedModule
   ]
 })
 export class ProductCategoryModule { }

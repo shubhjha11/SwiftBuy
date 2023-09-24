@@ -1,1 +1,7 @@
-<p>sub-category-list works!</p>
+<h3 class="mb-3">Shop by Sub-Category</h3>
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let subCategory of subCategories">
+    <a>{{ subCategory.name }}</a>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+</ul>

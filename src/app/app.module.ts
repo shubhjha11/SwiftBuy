@@ -12,6 +12,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductCategoryModule } from 'src/package/modules/product-category/product-category.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule,
     CoreModule,
     DashboardModule,
+    ProductCategoryModule,
     AuthenticationModule,
     FontAwesomeModule,
     CoreModule

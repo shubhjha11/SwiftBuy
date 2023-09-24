@@ -5,6 +5,9 @@ import { LoginComponent } from 'src/package/modules/authentication/components/lo
 import { DashboardModule } from 'src/package/modules/dashboard/dashboard.module';
 import { DashboardComponent } from 'src/package/modules/dashboard/components/dashboard/dashboard.component';
 import { SignupComponent } from 'src/package/modules/authentication/components/signup/signup.component';
+import { CartComponent } from 'src/package/modules/cart/components/cart/cart.component';
+import { ProductDetailsComponent } from 'src/package/modules/product-category/components/product-details/product-details.component';
+import { CategoryComponent } from 'src/package/modules/product-category/components/category/category.component';
 
 
 const routes: Routes = [
@@ -13,20 +16,20 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', component: DashboardComponent },
-      // { path: 'cart', component: CartComponent },
-      // { path: 'wishlist', component: WishlistComponent },
-      // { path: 'profile', component: ProfileComponent },
-      // { path: 'product/:id', component: ProductDetailsComponent },
-      // { path: 'category/:id', component: CategoryComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'product/:id', component: ProductDetailsComponent },
+      { path: 'category/:id', component: CategoryComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: SignupComponent }
     ]
   },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: SignupComponent }
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

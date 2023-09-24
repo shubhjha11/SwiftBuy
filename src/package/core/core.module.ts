@@ -26,6 +26,9 @@ import { GlobalConstant } from './globalConstants/global-contant';
   ],
   providers: [
     GlobalConstant
+  ],
+  exports: [
+    LoaderComponent
   ]
 })
 export class CoreModule { 

@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CategoryProductSliderComponent } from './components/category-product-slider/category-product-slider.component';
+import { Router, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CategoryProductSliderComponent } from './components/category-product-sl
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule
   ],
   exports: [
     MaterialModule,
@@ -24,6 +26,7 @@ import { CategoryProductSliderComponent } from './components/category-product-sl
     FormsModule,
     FontAwesomeModule,
     CategoryProductSliderComponent,
+    ProductCardComponent,
   ]
 })
 export class SharedModule { }
