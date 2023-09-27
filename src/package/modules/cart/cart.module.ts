@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemsComponent } from './components/cart-items/cart-items.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
-
-
+import { SharedModule } from '../shared/shared.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     CheckoutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class CartModule { }

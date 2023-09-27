@@ -20,7 +20,7 @@ import { GlobalConstant } from './globalConstants/global-contant';
   imports: [
     CommonModule,
     RouterModule,
-    FontAwesomeModule,
+    // FontAwesomeModule,
     SharedModule,
     ReactiveFormsModule
   ],

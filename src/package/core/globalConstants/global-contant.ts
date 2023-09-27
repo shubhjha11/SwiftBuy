@@ -5,18 +5,24 @@ import { Product } from "src/package/modules/shared/model/product.model";
 export class GlobalConstant {
   productList: Product[] = [
     {
-      name: "Shoe 1",
-      image: "./../../../../assets/images/product/men-shoe.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, sem diam aliquet nunc, eget faucibus velit nunc quis nunc.",
-      price: "230",
-      brand: "Red Tape",
+      name: "TIMBERLAND Men Work Boots Rigmaster 8' Steel-Toe Waterproof Brown 11W-US/10.5UK",
+      images: [
+        "./../../../../assets/images/product/men-shoe.jpg",
+        "./../../../../assets/images/product/men-shoe.jpg",
+        "./../../../../assets/images/product/men-shoe.jpg"
+      ],
+      description: "Lorem ipsum dolor sit amt, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, sem diam aliquet nunc, eget faucibus velit nunc quis nunc.",
+      price: "1499.99",
+      brand: "TIMBERLAND ",
       category: "Shoes",
       productId: 1,
       subCategory: "Men's Shoes"
     },
     {
       name: "Shoe 2",
-      image: "./../../../../assets/images/product/men-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/men-shoe.jpg",
+      ],
       description: "",
       price: "450",
       brand: "Red Tape",
@@ -26,7 +32,9 @@ export class GlobalConstant {
     },
     {
       name: "Shoe 3",
-      image: "./../../../../assets/images/product/men-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/men-shoe.jpg",
+      ],
       description: "",
       price: "899",
       brand: "Red Tape",
@@ -36,7 +44,9 @@ export class GlobalConstant {
     },
     {
       name: "Shoe 4",
-      image: "./../../../../assets/images/product/women-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/women-shoe.jpg",
+      ],
       description: "",
       price: "599",
       brand: "Red Tape",
@@ -46,7 +56,9 @@ export class GlobalConstant {
     },
     {
       name: "Shoe 5",
-      image: "./../../../../assets/images/product/women-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/women-shoe.jpg",
+      ],
       description: "",
       price: "499",
       brand: "Red Tape",
@@ -56,7 +68,9 @@ export class GlobalConstant {
     },
     {
       name: "Shoe 6",
-      image: "./../../../../assets/images/product/women-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/women-shoe.jpg",
+      ],
       description: "",
       price: "499",
       brand: "Red Tape",
@@ -66,7 +80,9 @@ export class GlobalConstant {
     },
     {
       name: "Shoe 7",
-      image: "./../../../../assets/images/product/women-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/women-shoe.jpg",
+      ],
       description: "",
       price: "999",
       brand: "Red Tape",
@@ -76,7 +92,9 @@ export class GlobalConstant {
     },
     {
       name: "Shoe 8",
-      image: "./../../../../assets/images/product/women-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/women-shoe.jpg",
+      ],
       description: "",
       price: "899",
       brand: "Red Tape",
@@ -86,7 +104,9 @@ export class GlobalConstant {
     },
     {
       name: "Shoe 9",
-      image: "./../../../../assets/images/product/women-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/women-shoe.jpg",
+      ],
       description: "",
       price: "672",
       brand: "Red Tape",
@@ -96,7 +116,9 @@ export class GlobalConstant {
     },
     {
       name: "Shoe 10",
-      image: "./../../../../assets/images/product/men-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/men-shoe.jpg",
+      ],
       description: "",
       price: "345",
       brand: "Red Tape",
@@ -106,7 +128,9 @@ export class GlobalConstant {
     },
     {
       name: "Shoe 11",
-      image: "./../../../../assets/images/product/men-shoe.jpg",
+      images: [
+        "./../../../../assets/images/product/men-shoe.jpg",
+      ],
       description: "",
       price: "1120",
       brand: "Red Tape",

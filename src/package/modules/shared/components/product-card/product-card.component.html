@@ -1,10 +1,10 @@
 <!-- product card -->
 <div class="card product-card" *ngIf="product" routerLink="./../../product/{{product.productId}}">
-  <img class="card-img-top" [src]="product.image" [alt]="product.name" />
-  <fa-icon class="favourite-icon" [icon]="['far', 'heart']"></fa-icon>
+  <img class="card-img-top" [src]="product.images[0]" [alt]="product.name" />
+  <!-- <fa-icon class="favourite-icon" [icon]="['far', 'heart']"></fa-icon> -->
   <div class="card-body">
-    <h3 class="card-title">{{ product.brand }}</h3>
-    <h4 class="card-title">{{ product.name }}</h4>
+    <h4 class="card-title text-muted">{{ product.brand }}</h4>
+    <a class="h3 card-title">{{ product.name }}</a>
     <p class="card-text">
       <strong class="text-muted">{{ product.price | currency : 'INR' : 'symbol' : '1.2-2' }}</strong>
     </p>

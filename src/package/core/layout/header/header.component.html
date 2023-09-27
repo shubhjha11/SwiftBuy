@@ -1,12 +1,12 @@
 <nav class="navbar">
     <div class="logo" routerLink="/">
-        <img src="./../../../../assets/images/swiftbuy1.png" class="img-fluid"/>
+        <img src="./../../../../assets/images/swiftbuy1.png" class="img-fluid" />
     </div>
     <ul class="nav-links">
 
         <!-- Search -->
         <div class="search-container">
-            <input class="search expandright" id="searchright" type="search" placeholder="Search...">
+            <input class="search-input" id="searchright" type="search" placeholder="Search...">
         </div>
         <li class="search-icon">
             <label for="searchright">
@@ -15,8 +15,9 @@
         </li>
 
         <!-- Haburger for small device -->
-        <input type="checkbox" id="hamburger-toggle">
-        <label for="hamburger-toggle" class="hamburger">
+        <!-- <input type="checkbox" id="hamburger-toggle"> -->
+        <label for="hamburger-toggle" class="hamburger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">
             <fa-icon [icon]="['fas', 'bars']"></fa-icon>
         </label>
 
@@ -29,18 +30,44 @@
                 <fa-icon [icon]="['fas', 'user']" routerLink="login" title="Login"></fa-icon>
             </li>
             <li class="menu-item">
-                <fa-icon [icon]="['fas', 'shopping-cart']" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" title="Cart"></fa-icon>
+                <fa-icon [icon]="['fas', 'shopping-cart']" routerLink="cart" title="Cart"></fa-icon>
             </li>
         </div>
     </ul>
 </nav>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    
-  </div>
+    <div class="offcanvas-header">
+        <h2 class="offcanvas-title" id="offcanvasRightLabel">Menu</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="sidepanel-menu">
+            <li class="sidepanel-menu-item">
+                <a routerLink="/" title="Home">
+                    <fa-icon [icon]="['fas', 'home']" title="Home"></fa-icon>
+                    <h1>Home</h1>
+                </a>
+            </li>
+            <li class="sidepanel-menu-item">
+                <a routerLink="wishlist" title="Wishlist">
+                    <fa-icon [icon]="['fas', 'heart']" title="Wishlist"></fa-icon>
+                    <h1>Wishlist</h1>
+                </a>
+            </li>
+            <li class="sidepanel-menu-item">
+                <a routerLink="login" title="Login">
+                    <fa-icon [icon]="['fas', 'user']" routerLink="login" title="Login"></fa-icon>
+                    <h1>Login</h1>
+                </a>
+            </li>
+            <li class="sidepanel-menu-item">
+                <a routerLink="cart" title="Cart">
+                    <fa-icon [icon]="['fas', 'shopping-cart']" title="Cart"></fa-icon>
+                    <h1>Cart</h1>
+                </a>
+            </li>
+        </ul>
+
+    </div>
 </div>

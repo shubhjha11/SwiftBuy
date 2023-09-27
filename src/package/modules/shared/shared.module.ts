@@ -6,11 +6,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CategoryProductSliderComponent } from './components/category-product-slider/category-product-slider.component';
 import { Router, RouterModule } from '@angular/router';
+import { ImageZoomDirective } from './directives/image-zoom.directive';
 
 @NgModule({
   declarations: [
     ProductCardComponent,
     CategoryProductSliderComponent,
+    ImageZoomDirective,
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { Router, RouterModule } from '@angular/router';
     FontAwesomeModule,
     CategoryProductSliderComponent,
     ProductCardComponent,
+    ImageZoomDirective
   ]
 })
 export class SharedModule { }

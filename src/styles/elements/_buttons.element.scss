@@ -1,19 +1,51 @@
-.sb-button {
+.button {
   padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
   border: none;
-  background-color: $accent-primary;
-  color: $color--white;
   transition: background-color 0.3s;
 
-  &:hover {
-    background-color: $button-hover-bg;
+  &--primary {
+    background-color: $accent-primary;
+    color: $color--white;
+  
+    &:hover {
+      background-color: $color--darkblue;
+    }
+  
+    &:disabled {
+      background-color: $divider-color; // Use a muted color for disabled state
+      cursor: not-allowed;
+    }
   }
 
-  &:disabled {
-    background-color: $divider-color; // Use a muted color for disabled state
-    cursor: not-allowed;
-  }  
+  &--secondary {
+    background-color: $accent-secondary;
+    color: $color--white;
+  
+    &:hover {
+      background-color: $color--darkred;
+    }
+  
+    &:disabled {
+      background-color: $divider-color; // Use a muted color for disabled state
+      cursor: not-allowed;
+    }
+  }
+
+  &--tertiary {
+    background-color: $accent-tertiary;
+    color: $color--white;
+  
+    &:hover {
+      background-color: $color--darkorange;
+    }
+  
+    &:disabled {
+      background-color: $divider-color; // Use a muted color for disabled state
+      cursor: not-allowed;
+    }
+  }
 }

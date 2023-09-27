@@ -13,6 +13,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductCategoryModule } from 'src/package/modules/product-category/product-category.module';
+import { CartModule } from 'src/package/modules/cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProductCategoryModule } from 'src/package/modules/product-category/prod
     RouterModule,
     CoreModule,
     DashboardModule,
+    CartModule,
     ProductCategoryModule,
     AuthenticationModule,
     FontAwesomeModule,
