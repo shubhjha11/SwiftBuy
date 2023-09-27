@@ -7,12 +7,14 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { CategoryProductSliderComponent } from './components/category-product-slider/category-product-slider.component';
 import { Router, RouterModule } from '@angular/router';
 import { ImageZoomDirective } from './directives/image-zoom.directive';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
     ProductCardComponent,
     CategoryProductSliderComponent,
     ImageZoomDirective,
+    PaginationComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { ImageZoomDirective } from './directives/image-zoom.directive';
     FontAwesomeModule,
     CategoryProductSliderComponent,
     ProductCardComponent,
-    ImageZoomDirective
+    ImageZoomDirective,
+    PaginationComponent
   ]
 })
 export class SharedModule { }

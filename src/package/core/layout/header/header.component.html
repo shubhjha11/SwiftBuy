@@ -27,8 +27,11 @@
             <li class="menu-item">
                 <fa-icon [icon]="['fas', 'heart']" routerLink="wishlist" title="Wishlist"></fa-icon>
             </li>
-            <li class="menu-item">
+            <li class="menu-item" *ngIf="!isLogin">
                 <fa-icon [icon]="['fas', 'user']" routerLink="login" title="Login"></fa-icon>
+            </li>
+            <li class="menu-item" *ngIf="isLogin">
+                <fa-icon [icon]="['fas', 'user-circle']" [matMenuTriggerFor]="profileMenu" title="Profile"></fa-icon>
             </li>
             <li class="menu-item">
                 <fa-icon [icon]="['fas', 'shopping-cart']" routerLink="cart" title="Cart"></fa-icon>
@@ -72,3 +75,14 @@
 
     </div>
 </div>
+
+<mat-menu #profileMenu="matMenu" xPosition="before">
+    <button mat-menu-item>
+        <fa-icon class="me-3" [icon]="['fas', 'user']"></fa-icon>
+        My Profile
+    </button>
+    <button mat-menu-item>
+        <fa-icon class="me-3" [icon]="['fas', 'sign-out-alt']"></fa-icon>
+        Logout
+    </button>
+  </mat-menu>

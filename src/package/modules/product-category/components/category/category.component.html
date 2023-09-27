@@ -1,13 +1,23 @@
-<div class="container">
-  <div class="row">
-    <h2 class="my-3">{{ categoryName }}</h2>
+<div class="container-fluid">
+  <div class="row gx-4">
+    <h1 class="col-md-12 py-3 mb-4 border-bottom">{{ categoryName }}</h1>
     <!-- left side will be the subcategory -->
-    <div class="col-md-3">
+    <div class="col-md-3 border-end">
+      <!-- Sub-Category List -->
       <app-sub-category-list [subCategories]="subCategories"></app-sub-category-list>
+
+      <hr>
+      <!-- Filters -->
+      <app-product-filters></app-product-filters>
     </div>
     <!-- right side will be the products list -->
     <div class="col-md-9">
+      <!-- Produt list -->
       <app-product-list [products]="productList"></app-product-list>
+
+      <hr>
+      <!-- Pagination -->
+      <app-pagination></app-pagination>
     </div>
   </div>
 </div>

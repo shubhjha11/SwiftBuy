@@ -6,6 +6,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CategoryComponent } from './components/category/category.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductCategoryRoutingModule } from './product-category-routing.module';
+import { ProductFiltersComponent } from './components/product-filters/product-filters.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ProductCategoryRoutingModule } from './product-category-routing.module'
     SubCategoryListComponent,
     ProductListComponent,
     ProductDetailsComponent,
+    ProductFiltersComponent,
   ],
   imports: [
     CommonModule,

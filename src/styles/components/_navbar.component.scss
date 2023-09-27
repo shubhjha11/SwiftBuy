@@ -3,6 +3,9 @@
   padding: 10px 30px;
   height: $header-height;
   border-bottom: 1px solid $divider-color;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   .logo {
     letter-spacing: 0.5rem;
