@@ -5,8 +5,33 @@
   border-bottom: 1px solid $divider-color;
 
   .logo {
-    width: 150px;
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
     cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    .swift-color {
+      color: $color--orange;
+    }
+
+    .ng-fa-icon {
+      transition: transform 0.3s ease;
+      display: inline-block;
+      transform-origin: center;
+      margin-right: 1rem;
+    }
+
+    &:hover {
+
+      .ng-fa-icon {
+        transform: rotate(360deg);
+      }
+      .swift-color {
+        color: $color--black;
+      }
+      transform: scale(1.1);
+    }
+
   }
   
   .logo-lg {
@@ -76,12 +101,8 @@
         font-size: 0.8rem;
 
         &:focus {
-          box-shadow: 0 0 1rem rgba($color--black, 0.3);
-          border: 1.5px solid $theme-dark;
-        }
-
-        &:hover {
-          box-shadow: 0 0 1rem rgba($color--black, 0.2);
+          box-shadow: 0 0 0.5rem rgba($color--black, 0.3);
+          border: 1px solid $theme-dark;
         }
       }
     }
