@@ -22,6 +22,7 @@
       display: inline-block;
       transform-origin: center;
       margin-right: 1rem;
+      color: $color--black;
     }
 
     &:hover {
@@ -33,15 +34,11 @@
         color: $color--black;
       }
       transform: scale(1.1);
+      color: $color--orange;
     }
 
   }
-  
-  .logo-lg {
-    width: 300px;
-    cursor: pointer;
-  }
-  
+    
   .nav-links {
     display: flex;
     align-items: center;
@@ -122,7 +119,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-md) {
     .nav-links {
 
       .search-container {
@@ -176,7 +173,7 @@
   &.show {
     display: none;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
         display: block;
     }
   }

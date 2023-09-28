@@ -9,10 +9,10 @@
   .carousel-caption {
     width: 30%;
     position: absolute;
-    top: 35%;
+    top: 30%;
 
-    @media (max-width: 768px) {
-      top: 25%; // Adjust the top position for smaller screens
+    @media (max-width: $breakpoint-md) {
+      top: 17%;
     }
 
     &.caption1 {
@@ -39,7 +39,7 @@
 }
 
 /* Media Query for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   #carouselBanner {
     .carousel-item {
       img {
