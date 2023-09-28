@@ -1,5 +1,4 @@
 .login-page {
-  height: calc(100vh - $header-height);
   @include flex(center, center, column);
 
   .login-header {
@@ -24,6 +23,10 @@
 
     &.signup-form {
       width: 600px;
+    }
+
+    .mat-form-field {
+      margin-bottom: 1rem;
     }
   }
 }

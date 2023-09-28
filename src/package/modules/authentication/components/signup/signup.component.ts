@@ -9,6 +9,8 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 export class SignupComponent implements OnInit {
 
   public signUpForm!: UntypedFormGroup;
+  public hide: boolean = true;
+  public hideConfirm: boolean = true;
   constructor(
     private fb: UntypedFormBuilder
   ) { }

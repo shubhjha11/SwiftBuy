@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   public username!: string;
   public password!: string;
   public loginForm!: UntypedFormGroup;
+  public hide: boolean = true;
   constructor(
     private fb: UntypedFormBuilder
   ) { }
