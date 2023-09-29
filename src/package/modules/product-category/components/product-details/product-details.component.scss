@@ -1,0 +1,22 @@
+@import 'src/styles/utility/mixins.utility.scss';
+@import 'src/styles/settings/color.setting.scss';
+
+.product-image-container {
+  @include flex(center, flex-start, column);
+  gap: 0.5rem;
+  padding-right: 0.5rem;
+  height: 100%;
+  max-height: 75vh;
+  overflow-y: auto;
+
+  .product-images {
+    padding: 0.25rem;
+    border: 1px solid $color--lightgrey;
+    border-radius: 0.5rem;
+
+    &:hover, &.active {
+      border: 1px solid $theme-dark;
+      box-shadow: 0 0 0.5rem rgba($color--black, 0.3);
+    }
+  }
+}

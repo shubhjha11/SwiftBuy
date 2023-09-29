@@ -66,6 +66,7 @@
       justify-content: center;
       line-height: 1rem;
       margin-right: 1.25rem;
+      cursor: pointer;
 
       &:hover {
         background-color: $color--lightgrey;
@@ -80,6 +81,7 @@
 
       &:hover {
         background-color: $theme-dark;
+        box-shadow: none;
       }
     }
     

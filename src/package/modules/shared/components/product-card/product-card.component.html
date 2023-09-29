@@ -1,6 +1,6 @@
 <!-- product card -->
 <div class="card product-card" *ngIf="product" routerLink="./../../product/{{product.productId}}">
-  <img class="card-img-top" [src]="product.images[0]" [alt]="product.name" />
+  <img class="card-img-top image-contain" [src]="product.images[0]" [alt]="product.name" />
   <!-- <fa-icon class="favourite-icon" [icon]="['far', 'heart']"></fa-icon> -->
   <div class="card-body">
     <h4 class="card-title text-muted">{{ product.brand }}</h4>

@@ -15,3 +15,8 @@
 .text-small {
   font-size: 0.75rem;
 }
+
+.image-contain {
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
