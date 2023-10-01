@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalConstant } from 'src/package/core/globalConstants/global-contant';
+import { ProductFinal } from 'src/package/modules/shared/model/product.model';
 
 @Component({
   selector: 'app-category',
@@ -8,7 +9,7 @@ import { GlobalConstant } from 'src/package/core/globalConstants/global-contant'
 })
 export class CategoryComponent implements OnInit {
 
-  public productList: any[] = [];
+  public productList: ProductFinal[] = [];
   public categoryName: string = 'Shoes';
   public subCategories: any[] = [
     {
@@ -42,7 +43,7 @@ export class CategoryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.productList = this.globalConstant.productList;
+    this.productList = this.globalConstant.demoProductList;
   }
 
 }

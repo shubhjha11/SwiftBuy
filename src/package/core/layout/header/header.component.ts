@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   public isLogin: boolean = false;
+  public isAdmin: boolean = true;
   constructor() { }
 
   ngOnInit(): void {

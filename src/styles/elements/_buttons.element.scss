@@ -1,5 +1,5 @@
 .button {
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: 500;
@@ -59,8 +59,8 @@
   height: 50px;
   text-align: center;
   line-height: 50px;
-  background: $color--black;
-  color: $color--white;
+  background: $color--lightgrey;
+  color: $color--black;
   cursor: pointer;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;

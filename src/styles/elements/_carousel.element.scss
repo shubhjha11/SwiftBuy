@@ -1,18 +1,20 @@
 #carouselBanner {
   .carousel-item {
     img {
-      height: 450px;
+      height: 60vh;
       width: 100%;
+      object-fit: cover;
     }
   }
 
   .carousel-caption {
     width: 30%;
     position: absolute;
-    top: 30%;
+    top: 50%;
+    transform: translateY(-50%);
 
     @media (max-width: $breakpoint-md) {
-      top: 17%;
+      top: 40%;
     }
 
     &.caption1 {

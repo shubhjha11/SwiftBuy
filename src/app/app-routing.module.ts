@@ -11,6 +11,8 @@ import { CategoryComponent } from 'src/package/modules/product-category/componen
 
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: SignupComponent },
   {
     path: '',
     component: LayoutComponent,
@@ -19,11 +21,20 @@ const routes: Routes = [
       { path: 'cart', component: CartComponent },
       { path: 'product/:id', component: ProductDetailsComponent },
       { path: 'category/:id', component: CategoryComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: SignupComponent }
     ]
   },
-
+  { 
+    path: 'dashboard',
+    component: LayoutComponent,
+    children: [
+      {
+        path: "",
+        loadChildren: () => 
+        import('src/package/modules/admin-dashboard/admin-dashboard.module')
+        .then(m => m.AdminDashboardModule)
+      }
+    ]
+  }
 ];
 
 @NgModule({

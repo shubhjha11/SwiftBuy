@@ -1,0 +1,62 @@
+// Style mat-paginatior
+.mat-paginator {
+  font-size: 1.25rem;
+
+  .mat-icon-button {
+  
+    &:hover {
+      background-color: $color--lightgrey;
+    }
+  }
+}
+
+
+// Style mat-table
+.mat-table {
+
+  .mat-header-row {
+    background-color: $color--lightgrey;
+  }
+
+  .mat-header-row,
+  .mat-row {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .mat-cell,
+  .mat-header-cell {
+    font-size: 1rem;
+  }
+
+  td.mat-cell,
+  th.mat-header-cell {
+    border: none;
+  }
+}
+
+// Custom style for snackbar
+.mat-snack-bar-container {
+  background-color: $color--lightgrey;
+  color: $color--black;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  min-width: auto !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+
+  span {
+    text-align: center;
+  }
+
+  &.error {
+    background-color: $color--red;
+    color: $color--white;
+  }
+
+  &.success {
+    background-color: $color--green;
+    color: $color--white;
+  }
+}

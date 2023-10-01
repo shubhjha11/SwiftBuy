@@ -9,7 +9,8 @@ export interface Product {
   category: string;
 }
 export interface ProductFinal {
-  imageUrls: string[];
+  productImages: ProductImage[];
+  id: number,
   brand: string;
   title: string;
   color: string;
@@ -27,4 +28,8 @@ export interface ProductFinal {
 export interface Size {
   name: string;
   quantity: number;
+}
+
+export interface ProductImage {
+  image: string;
 }

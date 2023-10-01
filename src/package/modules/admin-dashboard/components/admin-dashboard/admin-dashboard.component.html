@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 border-end p-2">
+      <div class="list-group list-group-flush">
+        <button type="button" 
+            [ngClass]="{ 'active': router.url.includes('analytics') }"
+            class="list-group-item list-group-item-action" 
+            routerLink="analytics">
+          Admin Dashboard
+        </button>
+        <button type="button"
+            [ngClass]="{ 'active': router.url.includes('products') }"
+            class="list-group-item list-group-item-action" 
+            routerLink="products">
+          Product List
+        </button>
+        <button type="button"
+            [ngClass]="{ 'active': router.url.includes('orders') }"
+            class="list-group-item list-group-item-action" 
+            routerLink="orders">
+          Order List
+        </button>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

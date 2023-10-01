@@ -1,34 +1,32 @@
 <section class="p-4">
-  <h2 class="my-4">
-    <!-- <a routerLink="./category"> -->
-      Popular destinations for Men
-      <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
-    <!-- </a> -->
-  </h2>
   <div class="card-container vertical-scroll">
-    <div class="card" *ngFor="let category of categories" routerLink="./category/{{category.categoryId}}">
+    <div class="destination">
+      <h2>
+          Popular destinations<br> for Men
+          <fa-icon [icon]="['fas', 'mars']"></fa-icon>
+      </h2>
+    </div>
+    <div class="card" *ngFor="let category of menCategories" routerLink="./category/{{category.id}}">
       <img src="{{category.image}}" class="card-img-top img-fluid" alt="{{category.name}}">
       <div class="card-body">
         <h5 class="card-title">{{category.name}}</h5>
       </div>
     </div>
-    <!-- <div class="link card">View more</div> -->
   </div>
 </section>
 <section class="p-4">
-  <h2 class="my-4">
-    <!-- <a routerLink="./category"> -->
-      Popular destinations for Women
-      <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
-    <!-- </a> -->
-  </h2>
   <div class="card-container">
-    <div class="card" *ngFor="let category of categories" routerLink="./category/{{category.categoryId}}">
+    <div class="destination">
+      <h2>
+        Popular destinations<br> for Women
+        <fa-icon [icon]="['fas', 'venus']"></fa-icon>
+      </h2>
+    </div>
+    <div class="card" *ngFor="let category of womenCategories" routerLink="./category/{{category.id}}">
       <img src="{{category.image}}" class="card-img-top img-fluid" alt="{{category.name}}">
       <div class="card-body">
         <h5 class="card-title">{{category.name}}</h5>
       </div>
     </div>
-    <!-- <div class="link card">View more</div> -->
   </div>
 </section>
