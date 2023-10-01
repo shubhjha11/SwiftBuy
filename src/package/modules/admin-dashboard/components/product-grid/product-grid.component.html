@@ -5,34 +5,44 @@
         (click)="addProduct()">
       <fa-icon [icon]="['fas', 'plus']"></fa-icon>
     </button>
-    <button class="button button--primary me-2"
-        (click)="addProduct()">
-      <fa-icon [icon]="['fas', 'trash']"></fa-icon>
-    </button>
-    <button class="button button--primary"
-        (click)="addProduct()">
+    <button class="button button--tertiary me-2"
+        *ngIf="showEditProduct"
+        (click)="editProduct()">
       <fa-icon [icon]="['fas', 'edit']"></fa-icon>
+    </button>
+    <button class="button button--secondary"
+        *ngIf="showDeleteProduct"
+        (click)="deleteProduct()">
+      <fa-icon [icon]="['fas', 'trash']"></fa-icon>
     </button>
   </div>
   <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!-- Checkbox Column -->
     <ng-container matColumnDef="select">
       <th mat-header-cell *matHeaderCellDef>
-        <mat-checkbox>
+        <mat-checkbox class="invisible" color="primary">
         </mat-checkbox>
       </th>
       <td mat-cell *matCellDef="let row">
-        <mat-checkbox (click)="$event.stopPropagation()">
+        <mat-checkbox color="primary" (click)="$event.stopPropagation()"
+            (change)="getSelectedProduct($event, row)">
         </mat-checkbox>
       </td>
     </ng-container>
-    <!-- 1st Column: Title and Brand -->
+    <!-- 1st Column: Image -->
+    <ng-container matColumnDef="image">
+      <mat-header-cell *matHeaderCellDef>Image</mat-header-cell>
+      <mat-cell *matCellDef="let product">
+        <img class="product-img" [src]="product.productImages[0].image" alt="Product Image" width="100" height="100">
+      </mat-cell>
+    </ng-container>
+    <!-- 2nd Column: Title and Brand -->
     <ng-container matColumnDef="title_brand">
-      <mat-header-cell *matHeaderCellDef>Title / Brand</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef>Title <br> Brand</mat-header-cell>
       <mat-cell *matCellDef="let product">{{ product.title }}<br> {{ product.brand }}</mat-cell>
     </ng-container>
   
-    <!-- 2nd Column: Price, MRP, Discount -->
+    <!-- 3rd Column: Price, MRP, Discount -->
     <ng-container matColumnDef="price_mrp_discount">
       <mat-header-cell *matHeaderCellDef>Price <br> MRP <br> Discount</mat-header-cell>
       <mat-cell *matCellDef="let product">
@@ -43,19 +53,19 @@
         {{ product.discount }}%</mat-cell>
     </ng-container>
   
-    <!-- 3rd Column: Quantity -->
+    <!-- 4th Column: Quantity -->
     <ng-container matColumnDef="quantity">
       <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
       <mat-cell *matCellDef="let product">{{ product.quantity }}</mat-cell>
     </ng-container>
   
-    <!-- 4th Column: Top Level Category -->
+    <!-- 5th Column: Top Level Category -->
     <ng-container matColumnDef="topLevelCategory">
-      <mat-header-cell *matHeaderCellDef>Top Level Category</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef>Product Target</mat-header-cell>
       <mat-cell *matCellDef="let product">{{ product.topLevelCategory }}</mat-cell>
     </ng-container>
   
-    <!-- 5th Column: Second and Third Level Category -->
+    <!-- 6th Column: Second and Third Level Category -->
     <ng-container matColumnDef="category">
       <mat-header-cell *matHeaderCellDef>Category <br> Sub-Category</mat-header-cell>
       <mat-cell *matCellDef="let product">{{ product.secondLevelCategory }} <br> {{ product.thirdLevelCategory }}</mat-cell>
@@ -64,9 +74,15 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
   </mat-table>
+
+  <hr>
+  <!-- Pagination -->
+  <app-pagination></app-pagination>
 </ng-container>
 <ng-container *ngIf="isAddProduct">
-  <app-add-product (addProductAction)="addProductAction($event)">
+  <app-add-product 
+      (addProductAction)="addProductAction($event)"
+      [selectedProduct]="selectedProduct">
   </app-add-product>
 </ng-container>
 

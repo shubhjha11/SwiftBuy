@@ -5,7 +5,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CategoryComponent } from './components/category/category.component';
 import { SharedModule } from '../shared/shared.module';
-import { ProductCategoryRoutingModule } from './product-category-routing.module';
+import { ProductCategoryRoutingModule } from './store-routing.module';
 import { ProductFiltersComponent } from './components/product-filters/product-filters.component';
 
 
@@ -23,4 +23,4 @@ import { ProductFiltersComponent } from './components/product-filters/product-fi
     SharedModule
   ]
 })
-export class ProductCategoryModule { }
+export class StoreModule { }

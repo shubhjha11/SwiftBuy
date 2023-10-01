@@ -1,5 +1,6 @@
 .login-page {
   @include flex(center, center, column);
+  height: calc(100vh - 60px);
 
   .login-header {
     text-align: center;
@@ -26,7 +27,7 @@
     }
 
     .mat-form-field {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
   }
 }

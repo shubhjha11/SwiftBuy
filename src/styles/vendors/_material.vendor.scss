@@ -1,6 +1,6 @@
 // Style mat-paginatior
 .mat-paginator {
-  font-size: 1.25rem;
+  font-size: 1rem;
 
   .mat-icon-button {
   
@@ -27,6 +27,13 @@
   .mat-cell,
   .mat-header-cell {
     font-size: 1rem;
+
+    .product-img {
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 1px solid $color--lightgrey;
+    }
   }
 
   td.mat-cell,

@@ -12,7 +12,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductCategoryModule } from 'src/package/modules/product-category/product-category.module';
+import { StoreModule } from 'src/package/modules/store/store.module';
 import { CartModule } from 'src/package/modules/cart/cart.module';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { CartModule } from 'src/package/modules/cart/cart.module';
     CoreModule,
     DashboardModule,
     CartModule,
-    ProductCategoryModule,
+    StoreModule,
     AuthenticationModule,
     FontAwesomeModule,
     CoreModule

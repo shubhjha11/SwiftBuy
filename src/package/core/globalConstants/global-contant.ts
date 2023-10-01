@@ -40,7 +40,7 @@ export class GlobalConstant {
       "quantity": 100,
       "topLevelCategory": "Men",
       "secondLevelCategory": "Shoes",
-      "thirdLevelCategory": "Sports Shoes",
+      "thirdLevelCategory": "Sports",
       "description": "The breathable mesh upper of these shoes for men ensures comfortable feet with optimal air circulation. Their versatile design seamlessly complements both formal and casual outfits, be it for work or college. Embrace their support during outdoor activities like yoga, running, jogging, or brisk walking. The lightweight material ensures all-day ease for your feet! Shoes' Outsole- The Anti-Slip outsole design of the running shoes provides you with a strong grip. They are designed to provide the utmost support and make for a reliable pair of shoes for men. Shoes' Insole- Embrace the personalized fit offered by the Memory Foam insole, perfectly adapting to your foot shape while providing exceptional arch support. Whether walking or running, the cushioned insole guarantees a luxurious and tailor-made experience."
     },
     {
@@ -78,7 +78,7 @@ export class GlobalConstant {
       "quantity": 100,
       "topLevelCategory": "Men",
       "secondLevelCategory": "Shoes",
-      "thirdLevelCategory": "Sports Shoes",
+      "thirdLevelCategory": "Sports",
       "description": "The breathable mesh upper of these shoes for men ensures comfortable feet with optimal air circulation. Their versatile design seamlessly complements both formal and casual outfits, be it for work or college. Embrace their support during outdoor activities like yoga, running, jogging, or brisk walking. The lightweight material ensures all-day ease for your feet! Shoes' Outsole- The Anti-Slip outsole design of the running shoes provides you with a strong grip. They are designed to provide the utmost support and make for a reliable pair of shoes for men. Shoes' Insole- Embrace the personalized fit offered by the Memory Foam insole, perfectly adapting to your foot shape while providing exceptional arch support. Whether walking or running, the cushioned insole guarantees a luxurious and tailor-made experience."
     },
   ];
@@ -112,6 +112,7 @@ export class GlobalConstant {
             { id: 'sneakers', name: 'Sneakers' },
             { id: 'boots', name: 'Boots' },
             { id: 'loafers', name: 'Loafers' },
+            { id : 'sports', name: 'Sports'}
           ],
         },
         {

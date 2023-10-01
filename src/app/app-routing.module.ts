@@ -6,8 +6,8 @@ import { DashboardModule } from 'src/package/modules/dashboard/dashboard.module'
 import { DashboardComponent } from 'src/package/modules/dashboard/components/dashboard/dashboard.component';
 import { SignupComponent } from 'src/package/modules/authentication/components/signup/signup.component';
 import { CartComponent } from 'src/package/modules/cart/components/cart/cart.component';
-import { ProductDetailsComponent } from 'src/package/modules/product-category/components/product-details/product-details.component';
-import { CategoryComponent } from 'src/package/modules/product-category/components/category/category.component';
+import { ProductDetailsComponent } from 'src/package/modules/store/components/product-details/product-details.component';
+import { CategoryComponent } from 'src/package/modules/store/components/category/category.component';
 
 
 const routes: Routes = [
@@ -24,7 +24,7 @@ const routes: Routes = [
     ]
   },
   { 
-    path: 'dashboard',
+    path: 'admin',
     component: LayoutComponent,
     children: [
       {

@@ -74,18 +74,24 @@
     </div>
     <div class="col-md-12">
       <mat-form-field>
-        <textarea matInput placeholder="Description" formControlName="description"></textarea>
+        <textarea matInput rows="4" placeholder="Description" formControlName="description"></textarea>
       </mat-form-field>
     </div>
     <div class="col-md-3">
       <mat-form-field>
       <input matInput type="number" placeholder="Price" formControlName="price">
+      <span matPrefix>₹&nbsp;</span>
     </mat-form-field>
     </div>
     <div class="col-md-3">
-      <mat-form-field>
+      <mat-form-field class="mb-0">
         <input matInput type="number" placeholder="MRP" formControlName="mrp">
+        <span matPrefix>₹&nbsp;</span>
       </mat-form-field>
+      <!-- show error if price > mrp -->
+      <mat-error *ngIf="productForm.get('price')?.value > productForm.get('mrp')?.value">
+        Price cannot be greater than MRP
+      </mat-error>
     </div>
     <div class="col-md-3">
       <mat-form-field>
@@ -106,7 +112,7 @@
         <button type="submit"
           class="button button--primary"
           (click)="onSubmit()">
-        Add Product
+        Save Product
       </button>
     </div>
   </form>
