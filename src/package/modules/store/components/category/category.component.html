@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row gx-4">
-    <h1 class="col-md-12 py-3 mb-4 border-bottom">{{ categoryName }}</h1>
+    <h1 class="col-md-12 py-3 mb-3 border-bottom">{{ categoryName }}</h1>
     <!-- left side will be the subcategory -->
     <div class="col-md-3 border-end">
       <!-- Sub-Category List -->
@@ -11,13 +11,28 @@
       <app-product-filters></app-product-filters>
     </div>
     <!-- right side will be the products list -->
-    <div class="col-md-9">
+    <div class="col-md-9 pb-80 position-relative">
+      <!-- Sort Product -->
+      <div class="d-flex justify-content-between p-2">
+        <h2>Results</h2>
+        <button [matMenuTriggerFor]="sortMenu">
+          <span class="h3 me-3">Sort By</span>          
+          <fa-icon [icon]="['fas', 'sort']"></fa-icon>
+        </button>
+        <mat-menu #sortMenu="matMenu">
+          <button mat-menu-item>Price: Low to High</button>
+          <button mat-menu-item>Price: High to Low</button>
+        </mat-menu>
+      </div>
+      <hr>
       <!-- Produt list -->
       <app-product-list [products]="productList"></app-product-list>
 
-      <hr>
       <!-- Pagination -->
-      <app-pagination></app-pagination>
+      <div class="position-absolute bottom-0" style="width: -webkit-fill-available;">
+        <hr class="mb-0">
+        <app-pagination></app-pagination>
+      </div>
     </div>
   </div>
 </div>

@@ -6,7 +6,10 @@
     <h4 class="card-title text-muted">{{ product.brand }}</h4>
     <a class="h3 card-title">{{ product.title }}</a>
     <p class="card-text">
-      <strong class="text-muted">{{ product.price | currency : 'INR' : 'symbol' : '1.2-2' }}</strong>
+      <strong class="fw-bold me-1">{{ product.price | currency : 'INR' : 'symbol' : '1.2-2' }}</strong>
+      <span class="text-decoration-line-through me-1">{{ product.mrp | currency : 'INR' : 'symbol' : '1.2-2' }}</span>
+      <br>
+      <span class="text-success">({{ product.discount }}% off)</span>
     </p>
   </div>
 </div>

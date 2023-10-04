@@ -81,6 +81,43 @@ export class GlobalConstant {
       "thirdLevelCategory": "Sports",
       "description": "The breathable mesh upper of these shoes for men ensures comfortable feet with optimal air circulation. Their versatile design seamlessly complements both formal and casual outfits, be it for work or college. Embrace their support during outdoor activities like yoga, running, jogging, or brisk walking. The lightweight material ensures all-day ease for your feet! Shoes' Outsole- The Anti-Slip outsole design of the running shoes provides you with a strong grip. They are designed to provide the utmost support and make for a reliable pair of shoes for men. Shoes' Insole- Embrace the personalized fit offered by the Memory Foam insole, perfectly adapting to your foot shape while providing exceptional arch support. Whether walking or running, the cushioned insole guarantees a luxurious and tailor-made experience."
     },
+    {
+      "productImages": [
+        { image: "https://m.media-amazon.com/images/I/71vgrQNoGZL._UY695_.jpg" },
+        { image: "https://m.media-amazon.com/images/I/71U7OrlljFL._UY695_.jpg" },
+        { image: "https://m.media-amazon.com/images/I/71DMiHJzQEL._UY695_.jpg" },
+        { image: "https://m.media-amazon.com/images/I/71JFiOCxKIL._UY695_.jpg" },
+        { image: "https://m.media-amazon.com/images/I/81nTuT1150L._UY695_.jpg" },
+      ],
+      "brand": "Red Tape",
+      "title": "Red Tape Men Ankle Length Boots",
+      "id": 3,
+      "color": "Brown",
+      "price": 1899,
+      "mrp": 7599,
+      "discount": 75,
+      "size": [
+        {
+          "name": "S",
+          "quantity": 20
+        },
+        {
+          "name": "M",
+          "quantity": 30
+        },
+        {
+          "name": "L",
+          "quantity": 50
+        }
+      ],
+      "quantity": 100,
+      "topLevelCategory": "Men",
+      "secondLevelCategory": "Shoes",
+      "thirdLevelCategory": "Casual",
+      "description": `THIS MEN'S ANKLE LENGTH BOOTS IS FOR: This Shoes Gives All-Day Comfort And Relaxation At The Feet And Keeps You Active All Day Long
+                      FEATURES: Closure - Zipper | Fit Type - Regular
+                      BENEFITS: Men's Zip-Up Ankle Length Boots Is Designed For Utmost Comfort With TPR Sole. It Provides Dynamic Feet Support, Arch Support, Slip- Resistance For Negating Accidental Falls, Firm Grip & Stability`
+    },
   ];
 
   categoriesList = [

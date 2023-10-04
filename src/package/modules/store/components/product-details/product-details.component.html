@@ -10,15 +10,15 @@
       </div>
     </div>
     <div class="col-md-5">
-      <img class="img-fluid image-contain" src="{{ selectedImage.image }}">      
+      <img class="img-fluid image-contain" src="{{ selectedImage.image }}">
     </div>
     <div class="col-md-6">
       <h3 class="text-muted mb-3">{{ product.brand }}</h3>
       <h1>{{ product.title }}</h1>
       <hr>
       <div class="mb-3 d-flex align-items-end">
-        <strong class="display-6 fw-bolder me-2">{{ product.price | currency : 'INR' : 'symbol' : '1.2-2' }}</strong>
-        <span class="text-decoration-line-through h2 me-2">{{ product.mrp | currency : 'INR' : 'symbol' : '1.2-2' }}</span>
+        <strong class="h1 fw-bolder me-2">{{ product.price | currency : 'INR' : 'symbol' : '1.2-2' }}</strong>
+        <span class="text-decoration-line-through h3 me-2">{{ product.mrp | currency : 'INR' : 'symbol' : '1.2-2' }}</span>
         <span class="text-success h2 fw-bold">({{ product.discount }}% off)</span> 
       </div>
       <div class="row g-2">       

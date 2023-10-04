@@ -67,3 +67,10 @@
     color: $color--white;
   }
 }
+
+// mat-checkbox styling
+.mat-checkbox {
+  .mat-checkbox-layout {
+    margin-bottom: 0.5rem;
+  }
+}

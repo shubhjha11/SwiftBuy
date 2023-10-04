@@ -16,7 +16,7 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.product = this.globalConstant.demoProductList[0];
+    this.product = this.globalConstant.demoProductList[2];
     this.selectedImage = this.product.productImages[0];
   }
 
