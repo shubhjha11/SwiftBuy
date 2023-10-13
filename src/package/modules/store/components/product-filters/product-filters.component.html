@@ -2,42 +2,17 @@
   Filters
   <fa-icon [icon]="['fas', 'filter']"></fa-icon>
 </h3>
-<div>
-  <label>Price range</label>
-  <div class="p-2">
-    <mat-checkbox color="primary" class="w-100">Under ₹500</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">₹500-₹1000</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">₹1000-₹1500</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">₹1500-₹3000</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">Over ₹3000</mat-checkbox>
+<div *ngFor="let filter of multiSelectFilter; let last=last">
+  <div class="fw-bold mb-2">{{filter.name}}</div>
+  <div class="px-2 py-1" *ngFor="let option of filter.options">
+    <mat-checkbox color="primary" 
+        [value]="option.value" 
+        [id]="'filter-' + option.value"
+        [name]="filter.id"
+        (click)="multiSelectFilterChange(option.value, filter.id)">
+      {{option.label}}
+    </mat-checkbox>
   </div>
-
-  <label>Brand</label>
-  <div class="p-2">
-    <mat-checkbox color="primary" class="w-100">Adidas</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">Nike</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">Puma</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">Reebok</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">Woodland</mat-checkbox>
-  </div>
-
-  <label>Color</label>
-  <div class="p-2">
-    <mat-checkbox color="primary" class="w-100">Black</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">White</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">Red</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">Blue</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">Green</mat-checkbox>
-  </div>
-
-  <label>Discount</label>
-  <div class="p-2">
-    <mat-checkbox color="primary" class="w-100">30% or more</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">40% or more</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">50% or more</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">60% or more</mat-checkbox>
-    <mat-checkbox color="primary" class="w-100">70% or more</mat-checkbox>
-  </div>
-
+  <hr *ngIf="!last">
 </div>
 

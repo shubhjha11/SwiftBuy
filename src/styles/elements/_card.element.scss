@@ -48,16 +48,26 @@
     text-align: center;
     cursor: pointer;
     height: 100%;
+    overflow: hidden;
+
+    .card-body {
+      background-color: $color--lightgrey;
+    }
 
     .card-img-top {
       padding: 0.5rem;
       mix-blend-mode: darken;
       aspect-ratio: 4/3;
       object-fit: contain;
+      transition: all 0.5s;
     }
 
     &:hover {
       box-shadow: 0 0 1rem rgba($color--black, 0.2);
+
+      .card-img-top {
+        transform: scale(1.05);
+      }
     }
 
     .favourite-icon {
@@ -65,7 +75,7 @@
       top: 1rem;
       right: 1rem;
       cursor: pointer;
-      color: $color--grey;
+      color: $color--lightgrey;
 
       .svg-inline--fa {
         font-size: 1.5rem;

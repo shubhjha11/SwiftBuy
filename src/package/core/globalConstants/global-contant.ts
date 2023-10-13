@@ -79,7 +79,10 @@ export class GlobalConstant {
       "topLevelCategory": "Men",
       "secondLevelCategory": "Shoes",
       "thirdLevelCategory": "Sports",
-      "description": "The breathable mesh upper of these shoes for men ensures comfortable feet with optimal air circulation. Their versatile design seamlessly complements both formal and casual outfits, be it for work or college. Embrace their support during outdoor activities like yoga, running, jogging, or brisk walking. The lightweight material ensures all-day ease for your feet! Shoes' Outsole- The Anti-Slip outsole design of the running shoes provides you with a strong grip. They are designed to provide the utmost support and make for a reliable pair of shoes for men. Shoes' Insole- Embrace the personalized fit offered by the Memory Foam insole, perfectly adapting to your foot shape while providing exceptional arch support. Whether walking or running, the cushioned insole guarantees a luxurious and tailor-made experience."
+      "description": `The breathable mesh upper of these shoes for men ensures comfortable feet with optimal air circulation. Their versatile design seamlessly complements both formal and casual outfits, be it 
+        for work or college. Embrace their support during outdoor activities like yoga, running, jogging, or brisk walking. The lightweight material ensures all-day ease for your feet! Shoes' Outsole- The Anti-Slip
+        outsole design of the running shoes provides you with a strong grip. They are designed to provide the utmost support and make for a reliable pair of shoes for men. Shoes' Insole- Embrace the personalized fit 
+        offered by the Memory Foam insole, perfectly adapting to your foot shape while providing exceptional arch support. Whether walking or running, the cushioned insole guarantees a luxurious and tailor-made experience.`
     },
     {
       "productImages": [
@@ -115,8 +118,8 @@ export class GlobalConstant {
       "secondLevelCategory": "Shoes",
       "thirdLevelCategory": "Casual",
       "description": `THIS MEN'S ANKLE LENGTH BOOTS IS FOR: This Shoes Gives All-Day Comfort And Relaxation At The Feet And Keeps You Active All Day Long
-                      FEATURES: Closure - Zipper | Fit Type - Regular
-                      BENEFITS: Men's Zip-Up Ankle Length Boots Is Designed For Utmost Comfort With TPR Sole. It Provides Dynamic Feet Support, Arch Support, Slip- Resistance For Negating Accidental Falls, Firm Grip & Stability`
+        FEATURES: Closure - Zipper | Fit Type - Regular BENEFITS: Men's Zip-Up Ankle Length Boots Is Designed For Utmost Comfort With TPR Sole. It Provides
+        Dynamic Feet Support, Arch Support, Slip- Resistance For Negating Accidental Falls, Firm Grip & Stability`
     },
   ];
 
@@ -240,4 +243,67 @@ export class GlobalConstant {
     },
   ];
   
+  multiSelectFilter = [
+    {
+      id: "color",
+      name: "Color",
+      options: [
+        { value: "white", label: "White" },
+        { value: "beige", label: "Beige" },
+        { value: "blue", label: "Blue" },
+        { value: "brown", label: "Brown" },
+        { value: "green", label: "Green" },
+        { value: "purple", label: "Purple" },
+        { value: "yellow", label:"Yellow"}
+      ],
+    },
+    {
+      id: "brand",
+      name: "Brand",
+      options: [
+        { value: "adidas", label: "Adidas" },
+        { value: "nike", label: "Nike" },
+        { value: "puma", label: "Puma" },
+        { value: "reebok", label: "Reebok" },
+        { value: "woodland", label: "Woodland" }
+      ],
+    },
+    {
+      id: "size",
+      name: "Size",
+      options: [
+        { value: "S", label: "S" },
+        { value: "M", label: "M" },
+        { value: "L", label: "L" },
+      ],
+    },
+    {
+      id: "price",
+      name: "Price Range",
+      options: [
+        { value: "0-499", label: "Under ₹499" },
+        { value: "500-999", label: "₹500 To ₹999" },
+        { value: "1000-1999", label: "₹1000 To ₹1999" },
+        { value: "2000-4999", label: "₹2000 To ₹4999" },
+        { value: "5000<", label: "Over ₹5000" },
+      ],
+    },
+    {
+      id: "discount",
+      name: "Discount",
+      options: [
+        { value: "30", label: "30% or more" },
+        { value: "40", label: "40% or more" },
+        { value: "50", label: "50% or more" },
+        { value: "60", label: "60% or more" }
+      ],
+    },
+    {
+      id: "stock",
+      name: "Availability",
+      options: [
+        { value: "out_of_stock", label: "Include Out Of Stock" },  
+      ],
+    },
+  ];
 }
