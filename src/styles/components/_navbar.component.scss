@@ -7,38 +7,57 @@
   top: 0;
   z-index: 100;
 
-  .logo {
-    letter-spacing: 0.5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
+  .left-navigation {
+    @include flex;
 
-    .swift-color {
-      color: $color--orange;
-    }
-
-    .ng-fa-icon {
-      transition: transform 0.3s ease;
-      display: inline-block;
-      transform-origin: center;
+    .logo {
+      letter-spacing: 0.5rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
       margin-right: 1rem;
-      color: $color--black;
-    }
-
-    &:hover {
-
-      .ng-fa-icon {
-        transform: rotate(360deg);
-      }
+  
       .swift-color {
+        color: $color--orange;
+      }
+  
+      .ng-fa-icon {
+        transition: transform 0.3s ease;
+        display: inline-block;
+        transform-origin: center;
+        margin-right: 1rem;
         color: $color--black;
       }
-      transform: scale(1.1);
-      color: $color--orange;
+  
+      &:hover {
+  
+        .ng-fa-icon {
+          transform: rotate(360deg);
+        }
+        .swift-color {
+          color: $color--black;
+        }
+        transform: scale(1.1);
+        color: $color--orange;
+      }
+  
     }
+  
+    .nav-menu {
+      margin-right: 1rem;
 
+      .menu-item {
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: $color--extra-lightgrey;
+        }
+      }
+    }
   }
-    
+  
   .nav-links {
     display: flex;
     align-items: center;

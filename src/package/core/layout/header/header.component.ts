@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalConstant } from '../../globalConstants/global-contant';
+import { CategoryList } from 'src/package/modules/shared/model/product.model';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +11,16 @@ export class HeaderComponent implements OnInit {
 
   public isLogin: boolean = false;
   public isAdmin: boolean = true;
-  constructor() { }
+  public categoriesList = this.globalConstant.categoriesList;
+  public menCategoryList!: CategoryList[];
+  public womenCategoryList!: CategoryList[];
+  constructor(
+    private globalConstant: GlobalConstant
+  ) { }
 
   ngOnInit(): void {
+    this.menCategoryList = this.categoriesList.filter(cat => cat.id == 'men');
+    this.womenCategoryList = this.categoriesList.filter(cat => cat.id == 'women');
   }
 
 }

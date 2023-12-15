@@ -1,137 +1,192 @@
 <nav class="navbar">
+  <div class="left-navigation">
     <div class="logo" routerLink="/">
-        <fa-icon [icon]="['fas', 'store']"></fa-icon>
-        <span class="swift-color">swift</span>buy
+      <fa-icon [icon]="['fas', 'store']"></fa-icon>
+      <span class="swift-color">swift</span>buy
     </div>
-    <ul class="nav-links">
+    <div class="nav-menu dropdown">
+      <div class="menu-item dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+        data-bs-auto-close="true">
+        Men
+      </div>
+      <div class="dropdown-menu navbar-menu">
+        <ng-container *ngFor="let cat of menCategoryList">
+          <div class="dropdown-header px-0">
+            <h3>Popular destinations for {{cat.name}}
+              <fa-icon class="ms-2" [icon]="['fas', 'mars']"></fa-icon>
+            </h3>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="row">
+            <div class="col" *ngFor="let subCat of cat.subcategories">
+              <h4 class="flex-center">
+                <a class="mb-2 me-2 category-item">{{subCat.name}}</a>
+                <fa-icon [icon]="['fas', 'caret-right']"></fa-icon>
+              </h4>
+              <a class="category-item" *ngFor="let subCat2 of subCat.subcategories">
+                {{subCat2.name}}
+              </a>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="nav-menu dropdown">
+      <div class="menu-item dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+        data-bs-auto-close="true">
+        Women
+      </div>
+      <div class="dropdown-menu navbar-menu">
+        <ng-container *ngFor="let cat of womenCategoryList">
+          <div class="dropdown-header px-0">
+            <h3>Popular destinations for {{cat.name}}
+              <fa-icon class="ms-2" [icon]="['fas', 'venus']"></fa-icon>
+            </h3>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="row">
+            <div class="col" *ngFor="let subCat of cat.subcategories">
+              <h4 class="flex-center">
+                <a class="mb-2 me-2 category-item">{{subCat.name}}</a>
+                <fa-icon [icon]="['fas', 'caret-right']"></fa-icon>
+              </h4>
+              <a class="category-item" *ngFor="let subCat2 of subCat.subcategories">
+                {{subCat2.name}}
+              </a>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <ul class="nav-links">
 
-        <!-- Search -->
-        <div class="search-container">
-            <input class="search-input" id="searchright" type="search" placeholder="Search...">
-        </div>
-        <li class="search-icon">
-            <label for="searchright">
-                <fa-icon [icon]="['fas', 'search']" title="Search"></fa-icon>
-            </label>
-        </li>
-        <li class="search-icon-mobile">
-            <label for="searchright" data-bs-toggle="collapse" data-bs-target="#searchCollapse">
-                <fa-icon [icon]="['fas', 'search']" title="Search"></fa-icon>
-            </label>
-        </li>
-        
-        <!-- Haburger for small device -->
-        <label class="hamburger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight">
-            <fa-icon [icon]="['fas', 'bars']"></fa-icon>
-        </label>
+    <!-- Search -->
+    <div class="search-container">
+      <input class="search-input" id="searchright" type="search" placeholder="Search...">
+    </div>
+    <li class="search-icon">
+      <label for="searchright">
+        <fa-icon [icon]="['fas', 'search']" title="Search"></fa-icon>
+      </label>
+    </li>
+    <li class="search-icon-mobile">
+      <label for="searchright" data-bs-toggle="collapse" data-bs-target="#searchCollapse">
+        <fa-icon [icon]="['fas', 'search']" title="Search"></fa-icon>
+      </label>
+    </li>
 
-        <!-- Menu items -->
-        <div class="menu">
-            <li class="menu-item" routerLink="/wishlist" title="Wishlist">
-                <fa-icon [icon]="['fas', 'heart']" ></fa-icon>
-            </li>
-            <li class="menu-item" routerLink="/login" title="Login" *ngIf="!isLogin">
-                <fa-icon [icon]="['fas', 'user']"></fa-icon>
-            </li>
-            <li class="menu-item" title="Profile" [matMenuTriggerFor]="profileMenu" *ngIf="!isLogin">
-                <fa-icon [icon]="['fas', 'user-circle']" ></fa-icon>
-            </li>
-            <li class="menu-item" routerLink="/cart" title="Cart">
-                <fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>
-            </li>
-        </div>
-    </ul>
+    <!-- Haburger for small device -->
+    <label class="hamburger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+      <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+    </label>
+
+    <!-- Menu items -->
+    <div class="menu">
+      <li class="menu-item" routerLink="/wishlist" title="Wishlist">
+        <fa-icon [icon]="['fas', 'heart']"></fa-icon>
+      </li>
+      <li class="menu-item" routerLink="/login" title="Login" *ngIf="!isLogin">
+        <fa-icon [icon]="['fas', 'user']"></fa-icon>
+      </li>
+      <li class="menu-item" title="Profile" [matMenuTriggerFor]="profileMenu" *ngIf="!isLogin">
+        <fa-icon [icon]="['fas', 'user-circle']"></fa-icon>
+      </li>
+      <li class="menu-item" routerLink="/cart" title="Cart">
+        <fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>
+      </li>
+    </div>
+  </ul>
 </nav>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-        <h2 class="offcanvas-title" id="offcanvasRightLabel"></h2>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <ul class="sidepanel-menu">
-            <li class="sidepanel-menu-item">
-                <a routerLink="/" data-bs-dismiss="offcanvas">
-                    <fa-icon [icon]="['fas', 'home']"></fa-icon>
-                    <h1>Home</h1>
-                </a>
-            </li>
-            <li class="sidepanel-menu-item" *ngIf="isLogin">
-                <a routerLink="/profile" data-bs-dismiss="offcanvas">
-                    <fa-icon [icon]="['fas', 'user-circle']"></fa-icon>
-                    <h1>My Profile</h1>
-                </a>
-            </li>
-            <li class="sidepanel-menu-item" *ngIf="isLogin">
-                <a routerLink="/order" data-bs-dismiss="offcanvas">
-                    <fa-icon [icon]="['fab', 'shopify']"></fa-icon>
-                    <h1>My Orders</h1>
-                </a>
-            </li>
-            <li class="sidepanel-menu-item" *ngIf="!isLogin && isAdmin">
-                <a routerLink="/admin" data-bs-dismiss="offcanvas">
-                    <fa-icon [icon]="['fas', 'chart-line']" ></fa-icon>
-                    <h1>Admin Dashboard</h1>
-                </a>
-            </li>
-            <li class="sidepanel-menu-item">
-                <a routerLink="/wishlist" data-bs-dismiss="offcanvas">
-                    <fa-icon [icon]="['fas', 'heart']"></fa-icon>
-                    <h1>Wishlist</h1>
-                </a>
-            </li>
-            <li class="sidepanel-menu-item" *ngIf="!isLogin">
-                <a routerLink="/login" data-bs-dismiss="offcanvas">
-                    <fa-icon [icon]="['fas', 'user']"></fa-icon>
-                    <h1>Login</h1>
-                </a>
-            </li>
-            <li class="sidepanel-menu-item">
-                <a routerLink="/cart" data-bs-dismiss="offcanvas">
-                    <fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>
-                    <h1>Cart</h1>
-                </a>
-            </li>
-            <li class="sidepanel-menu-item" *ngIf="isLogin">
-                <a routerLink="/" data-bs-dismiss="offcanvas">
-                    <fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon>
-                    <h1>Logout</h1>
-                </a>
-            </li>
-        </ul>
-    </div>
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasRightLabel"></h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="sidepanel-menu">
+      <li class="sidepanel-menu-item">
+        <a routerLink="/" data-bs-dismiss="offcanvas">
+          <fa-icon [icon]="['fas', 'home']"></fa-icon>
+          <h1>Home</h1>
+        </a>
+      </li>
+      <li class="sidepanel-menu-item" *ngIf="isLogin">
+        <a routerLink="/profile" data-bs-dismiss="offcanvas">
+          <fa-icon [icon]="['fas', 'user-circle']"></fa-icon>
+          <h1>My Profile</h1>
+        </a>
+      </li>
+      <li class="sidepanel-menu-item" *ngIf="isLogin">
+        <a routerLink="/order" data-bs-dismiss="offcanvas">
+          <fa-icon [icon]="['fab', 'shopify']"></fa-icon>
+          <h1>My Orders</h1>
+        </a>
+      </li>
+      <li class="sidepanel-menu-item" *ngIf="!isLogin && isAdmin">
+        <a routerLink="/admin" data-bs-dismiss="offcanvas">
+          <fa-icon [icon]="['fas', 'chart-line']"></fa-icon>
+          <h1>Admin Dashboard</h1>
+        </a>
+      </li>
+      <li class="sidepanel-menu-item">
+        <a routerLink="/wishlist" data-bs-dismiss="offcanvas">
+          <fa-icon [icon]="['fas', 'heart']"></fa-icon>
+          <h1>Wishlist</h1>
+        </a>
+      </li>
+      <li class="sidepanel-menu-item" *ngIf="!isLogin">
+        <a routerLink="/login" data-bs-dismiss="offcanvas">
+          <fa-icon [icon]="['fas', 'user']"></fa-icon>
+          <h1>Login</h1>
+        </a>
+      </li>
+      <li class="sidepanel-menu-item">
+        <a routerLink="/cart" data-bs-dismiss="offcanvas">
+          <fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>
+          <h1>Cart</h1>
+        </a>
+      </li>
+      <li class="sidepanel-menu-item" *ngIf="isLogin">
+        <a routerLink="/" data-bs-dismiss="offcanvas">
+          <fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon>
+          <h1>Logout</h1>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <mat-menu #profileMenu="matMenu" xPosition="before">
-    <button mat-menu-item routerLink="/profile">
-        <fa-icon class="me-3" [icon]="['fas', 'user']"></fa-icon>
-        My Profile
-    </button>
-    <button mat-menu-item routerLink="/admin">
-        <fa-icon class="me-3" [icon]="['fas', 'chart-line']"></fa-icon>
-        Admin Dashboard
-    </button>
-    <button mat-menu-item routerLink="/order">
-        <fa-icon class="me-3" [icon]="['fab', 'shopify']"></fa-icon>
-        My Orders
-    </button>
-    <button mat-menu-item routerLink="/">
-        <fa-icon class="me-3" [icon]="['fas', 'sign-out-alt']"></fa-icon>
-        Logout
-    </button>
+  <button mat-menu-item routerLink="/profile">
+    <fa-icon class="me-3" [icon]="['fas', 'user']"></fa-icon>
+    My Profile
+  </button>
+  <button mat-menu-item routerLink="/admin">
+    <fa-icon class="me-3" [icon]="['fas', 'chart-line']"></fa-icon>
+    Admin Dashboard
+  </button>
+  <button mat-menu-item routerLink="/order">
+    <fa-icon class="me-3" [icon]="['fab', 'shopify']"></fa-icon>
+    My Orders
+  </button>
+  <button mat-menu-item routerLink="/">
+    <fa-icon class="me-3" [icon]="['fas', 'sign-out-alt']"></fa-icon>
+    Logout
+  </button>
 </mat-menu>
 
 <div class="collapse" id="searchCollapse">
-    <div class="card card-body my-2 pb-0">
-        <mat-form-field appearance="fill" class="mb-0">
-            <mat-label>Search..</mat-label>
-            <input matInput type="text">
-            <button mat-icon-button matSuffix>
-              <mat-icon>
-                <fa-icon [icon]="['fas', 'search']"></fa-icon>
-              </mat-icon>
-            </button>
-        </mat-form-field>
-    </div>
+  <div class="card card-body my-2 pb-0">
+    <mat-form-field appearance="fill" class="mb-0">
+      <mat-label>Search..</mat-label>
+      <input matInput type="text">
+      <button mat-icon-button matSuffix>
+        <mat-icon>
+          <fa-icon [icon]="['fas', 'search']"></fa-icon>
+        </mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
 </div>

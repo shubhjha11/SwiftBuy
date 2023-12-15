@@ -33,3 +33,22 @@ export interface Size {
 export interface ProductImage {
   image: string;
 }
+
+export interface CategoryList {
+  id: string
+  name: string
+  subcategories: Subcategory[]
+}
+
+export interface Subcategory {
+  id: string
+  name: string
+  image1: string
+  image: string
+  subcategories: Subcategory2[]
+}
+
+export interface Subcategory2 {
+  id: string
+  name: string
+}

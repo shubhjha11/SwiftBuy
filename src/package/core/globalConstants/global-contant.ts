@@ -125,122 +125,122 @@ export class GlobalConstant {
 
   categoriesList = [
     {
-      id: 'men',
-      name: 'Men',
-      subcategories: [
+      "id": "men",
+      "name": "Men",
+      "subcategories": [
         {
-          id: 'clothing',
-          name: 'Clothing',
-          image1: "https://m.media-amazon.com/images/G/31/img21/MA2023/june/WRS/ethinc/halo/New_Season._CB587544226_.png",
-          image: "https://m.media-amazon.com/images/G/31/img21/MA2023/june/WRS/ethinc/halo/New_Season._CB587544226_.png",
-          subcategories: [
-            { id: 'shirts', name: 'Shirts' },
-            { id: 'jeans', name: 'Jeans' },
-            { id: 'jackets', name: 'Jackets' },
-            { id: 'trousers', name: 'Trousers' },
-            { id: 'suits', name: 'Suits' },
-          ],
+          "id": "clothing",
+          "name": "Clothing",
+          "image1": "https://m.media-amazon.com/images/G/31/img21/MA2023/june/WRS/ethinc/halo/New_Season._CB587544226_.png",
+          "image": "https://m.media-amazon.com/images/G/31/img21/MA2023/june/WRS/ethinc/halo/New_Season._CB587544226_.png",
+          "subcategories": [
+            { "id": "shirts", "name": "Shirts" },
+            { "id": "jeans", "name": "Jeans" },
+            { "id": "jackets", "name": "Jackets" },
+            { "id": "trousers", "name": "Trousers" },
+            { "id": "suits", "name": "Suits" }
+          ]
         },
         {
-          id: 'shoes',
-          name: 'Shoes',
-          image1: "https://m.media-amazon.com/images/G/31/img21/shoes/2023/2.0/Women/Halo/Mens._CB578759497_.png",
-          image: "https://m.media-amazon.com/images/G/31/img21/shoes/2023/2.0/Women/Halo/Mens._CB578759497_.png",
-          subcategories: [
-            { id: 'casual', name: 'Casual' },
-            { id: 'formal', name: 'Formal' },
-            { id: 'sneakers', name: 'Sneakers' },
-            { id: 'boots', name: 'Boots' },
-            { id: 'loafers', name: 'Loafers' },
-            { id : 'sports', name: 'Sports'}
-          ],
+          "id": "shoes",
+          "name": "Shoes",
+          "image1": "https://m.media-amazon.com/images/G/31/img21/shoes/2023/2.0/Women/Halo/Mens._CB578759497_.png",
+          "image": "https://m.media-amazon.com/images/G/31/img21/shoes/2023/2.0/Women/Halo/Mens._CB578759497_.png",
+          "subcategories": [
+            { "id": "casual", "name": "Casual" },
+            { "id": "formal", "name": "Formal" },
+            { "id": "sneakers", "name": "Sneakers" },
+            { "id": "boots", "name": "Boots" },
+            { "id": "loafers", "name": "Loafers" },
+            { "id": "sports", "name": "Sports" }
+          ]
         },
         {
-          id: 'watches',
-          name: 'Watches',
-          image1: "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Men._SS400_QL85_.jpg",
-          image: "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Men._SS400_QL85_.jpg",
-          subcategories: [
-            { id: 'analog', name: 'Analog' },
-            { id: 'digital', name: 'Digital' },
-            { id: 'chronograph', name: 'Chronograph' },
-            { id: 'luxury', name: 'Luxury' },
-            { id: 'sports', name: 'Sports' },
-          ],
+          "id": "watches",
+          "name": "Watches",
+          "image1": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Men._SS400_QL85_.jpg",
+          "image": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Men._SS400_QL85_.jpg",
+          "subcategories": [
+            { "id": "analog", "name": "Analog" },
+            { "id": "digital", "name": "Digital" },
+            { "id": "chronograph", "name": "Chronograph" },
+            { "id": "luxury", "name": "Luxury" },
+            { "id": "sports", "name": "Sports" }
+          ]
         },
         {
-          id: 'accessories',
-          name: 'Accessories',
-          image1: "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Men._SS400_QL85_.jpg",
-          image: "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/sunglasses_unselected._SS300_QL85_FMpng_.png",
-          subcategories: [
-            { id: 'belts', name: 'Belts' },
-            { id: 'ties', name: 'Ties' },
-            { id: 'wallets', name: 'Wallets' },
-            { id: 'hats', name: 'Hats' },
-            { id: 'sunglasses', name: 'Sunglasses' },
-          ],
-        },
-      ],
+          "id": "accessories",
+          "name": "Accessories",
+          "image1": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Men._SS400_QL85_.jpg",
+          "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/sunglasses_unselected._SS300_QL85_FMpng_.png",
+          "subcategories": [
+            { "id": "belts", "name": "Belts" },
+            { "id": "ties", "name": "Ties" },
+            { "id": "wallets", "name": "Wallets" },
+            { "id": "hats", "name": "Hats" },
+            { "id": "sunglasses", "name": "Sunglasses" }
+          ]
+        }
+      ]
     },
     {
-      id: 'women',
-      name: 'Women',
-      subcategories: [
+      "id": "women",
+      "name": "Women",
+      "subcategories": [
         {
-          id: 'clothing',
-          name: 'Clothing',
-          image1: "https://m.media-amazon.com/images/G/31/img19/Fashion/WA19/Topwear-Store/SBC/updated/tops._SS680_QL85_.jpg",
-          image: "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Women__unselected._SS300_QL85_FMpng_.png",
-          subcategories: [
-            { id: 'dresses', name: 'Dresses' },
-            { id: 'tops', name: 'Tops' },
-            { id: 'skirts', name: 'Skirts' },
-            { id: 'blouses', name: 'Blouses' },
-            { id: 'jumpsuits', name: 'Jumpsuits' },
-          ],
+          "id": "clothing",
+          "name": "Clothing",
+          "image1": "https://m.media-amazon.com/images/G/31/img19/Fashion/WA19/Topwear-Store/SBC/updated/tops._SS680_QL85_.jpg",
+          "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Women__unselected._SS300_QL85_FMpng_.png",
+          "subcategories": [
+            { "id": "dresses", "name": "Dresses" },
+            { "id": "tops", "name": "Tops" },
+            { "id": "skirts", "name": "Skirts" },
+            { "id": "blouses", "name": "Blouses" },
+            { "id": "jumpsuits", "name": "Jumpsuits" }
+          ]
         },
         {
-          id: 'footwear',
-          name: 'Footwear',
-          image1: "https://m.media-amazon.com/images/G/31/img21/shoes/2023/2.0/Women/Halo/Women._CB578759497_.png",
-          image: "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Footwear_unselected._SS300_QL85_FMpng_.png",
-          subcategories: [
-            { id: 'heels', name: 'Heels' },
-            { id: 'flats', name: 'Flats' },
-            { id: 'boots', name: 'Boots' },
-            { id: 'sandals', name: 'Sandals' },
-            { id: 'sneakers', name: 'Sneakers' },
-          ],
+          "id": "footwear",
+          "name": "Footwear",
+          "image1": "https://m.media-amazon.com/images/G/31/img21/shoes/2023/2.0/Women/Halo/Women._CB578759497_.png",
+          "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Footwear_unselected._SS300_QL85_FMpng_.png",
+          "subcategories": [
+            { "id": "heels", "name": "Heels" },
+            { "id": "flats", "name": "Flats" },
+            { "id": "boots", "name": "Boots" },
+            { "id": "sandals", "name": "Sandals" },
+            { "id": "sneakers", "name": "Sneakers" }
+          ]
         },
         {
-          id: 'watches',
-          name: 'Watches',
-          image1: "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Women._SS400_QL85_.jpg",
-          image: "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Watches_unselected._SS300_QL85_FMpng_.png",
-          subcategories: [
-            { id: 'designer', name: 'Designer' },
-            { id: 'fashion', name: 'Fashion' },
-            { id: 'smartwatches', name: 'Smartwatches' },
-            { id: 'luxury', name: 'Luxury' },
-            { id: 'fitness', name: 'Fitness' },
-          ],
+          "id": "watches",
+          "name": "Watches",
+          "image1": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Women._SS400_QL85_.jpg",
+          "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Watches_unselected._SS300_QL85_FMpng_.png",
+          "subcategories": [
+            { "id": "designer", "name": "Designer" },
+            { "id": "fashion", "name": "Fashion" },
+            { "id": "smartwatches", "name": "Smartwatches" },
+            { "id": "luxury", "name": "Luxury" },
+            { "id": "fitness", "name": "Fitness" }
+          ]
         },
         {
-          id: 'accessories',
-          name: 'Accessories',
-          image1: "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Women._SS400_QL85_.jpg",
-          image: "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Jewellery_unselected._SS300_QL85_FMpng_.png",
-          subcategories: [
-            { id: 'handbags', name: 'Handbags' },
-            { id: 'jewelry', name: 'Jewelry' },
-            { id: 'scarves', name: 'Scarves' },
-            { id: 'hats', name: 'Hats' },
-            { id: 'sunglasses', name: 'Sunglasses' },
-          ],
-        },
-      ],
-    },
+          "id": "accessories",
+          "name": "Accessories",
+          "image1": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Women._SS400_QL85_.jpg",
+          "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Jewellery_unselected._SS300_QL85_FMpng_.png",
+          "subcategories": [
+            { "id": "handbags", "name": "Handbags" },
+            { "id": "jewelry", "name": "Jewelry" },
+            { "id": "scarves", "name": "Scarves" },
+            { "id": "hats", "name": "Hats" },
+            { "id": "sunglasses", "name": "Sunglasses" }
+          ]
+        }
+      ]
+    }
   ];
   
   multiSelectFilter = [

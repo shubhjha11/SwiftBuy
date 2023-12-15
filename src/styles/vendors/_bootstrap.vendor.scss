@@ -1,0 +1,19 @@
+.dropdown {
+
+  .dropdown-menu {
+    padding: 1rem 1rem 0.5rem;
+  
+    &.navbar-menu {
+      width: 60vw;
+  
+      .category-item {
+        display: block;
+        margin: 0.5rem 0;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
