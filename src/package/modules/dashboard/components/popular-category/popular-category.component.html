@@ -6,7 +6,7 @@
           <fa-icon [icon]="['fas', 'mars']"></fa-icon>
       </h2>
     </div>
-    <div class="card" *ngFor="let category of menCategories" routerLink="./category/{{category.id}}">
+    <div class="card" *ngFor="let category of menCategories" routerLink="./category/men/{{category.id}}/">
       <img src="{{category.image}}" class="card-img-top img-fluid" alt="{{category.name}}">
       <div class="card-body">
         <h5 class="card-title">{{category.name}}</h5>
@@ -22,7 +22,7 @@
         <fa-icon [icon]="['fas', 'venus']"></fa-icon>
       </h2>
     </div>
-    <div class="card" *ngFor="let category of womenCategories" routerLink="./category/{{category.id}}">
+    <div class="card" *ngFor="let category of womenCategories" routerLink="./category/women/{{category.id}}">
       <img src="{{category.image}}" class="card-img-top img-fluid" alt="{{category.name}}">
       <div class="card-body">
         <h5 class="card-title">{{category.name}}</h5>

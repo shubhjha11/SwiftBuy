@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { GlobalConstant } from 'src/package/core/globalConstants/global-contant';
 import { ProductFinal, ProductImage } from 'src/package/modules/shared/model/product.model';
 
@@ -12,11 +13,13 @@ export class ProductDetailsComponent implements OnInit {
   public product!: ProductFinal;
   public selectedImage!: ProductImage;
   constructor(
-    private globalConstant: GlobalConstant
+    private globalConstant: GlobalConstant,
+    private router: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.product = this.globalConstant.demoProductList[2];
+    const productId: string = this.router.snapshot.paramMap.get('id')!;
+    this.product = this.globalConstant.demoProductList.find(el => el.id === Number(productId))!;
     this.selectedImage = this.product.productImages[0];
   }
 
