@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Product } from "src/package/modules/shared/model/product.model";
+import { CategoryList, Product } from "src/package/modules/shared/model/product.model";
 
 @Injectable()
 export class GlobalConstant {
@@ -123,7 +123,7 @@ export class GlobalConstant {
     },
   ];
 
-  categoriesList = [
+  categoriesList: CategoryList[] = [
     {
       "id": "men",
       "name": "Men",
@@ -131,54 +131,50 @@ export class GlobalConstant {
         {
           "id": "clothing",
           "name": "Clothing",
-          "image1": "https://m.media-amazon.com/images/G/31/img21/MA2023/june/WRS/ethinc/halo/New_Season._CB587544226_.png",
           "image": "https://m.media-amazon.com/images/G/31/img21/MA2023/june/WRS/ethinc/halo/New_Season._CB587544226_.png",
           "subcategories": [
-            { "id": "shirts", "name": "Shirts" },
-            { "id": "jeans", "name": "Jeans" },
-            { "id": "jackets", "name": "Jackets" },
-            { "id": "trousers", "name": "Trousers" },
-            { "id": "suits", "name": "Suits" }
+            { "id": "shirts", "name": "Shirts", "image": "https://i.ebayimg.com/thumbs/images/g/5vcAAOSwn55e7xmT/s-l225.webp" },
+            { "id": "jeans", "name": "Jeans", "image": "https://i.ebayimg.com/thumbs/images/g/b9IAAOSwu0Fe7xmd/s-l225.webp" },
+            { "id": "jackets", "name": "Jackets", "image": "https://i.ebayimg.com/thumbs/images/g/hg8AAOSwAoFbarSF/s-l225.webp" },
+            { "id": "trousers", "name": "Trousers", "image": "https://i.ebayimg.com/thumbs/images/g/dKkAAOSwu2Re7xmR/s-l225.webp" },
+            { "id": "suits", "name": "Suits", "image": "https://i.ebayimg.com/thumbs/images/g/gssAAOSwOahe7xmM/s-l225.webp" }
           ]
         },
         {
           "id": "shoes",
           "name": "Shoes",
-          "image1": "https://m.media-amazon.com/images/G/31/img21/shoes/2023/2.0/Women/Halo/Mens._CB578759497_.png",
           "image": "https://m.media-amazon.com/images/G/31/img21/shoes/2023/2.0/Women/Halo/Mens._CB578759497_.png",
           "subcategories": [
-            { "id": "casual", "name": "Casual" },
-            { "id": "formal", "name": "Formal" },
-            { "id": "sneakers", "name": "Sneakers" },
-            { "id": "boots", "name": "Boots" },
-            { "id": "loafers", "name": "Loafers" },
-            { "id": "sports", "name": "Sports" }
+            { "id": "formal", "name": "Formal", "image": "https://i.ebayimg.com/thumbs/images/g/lq4AAOSwIsFdct~d/s-l225.webp" },
+            { "id": "casual", "name": "Casual", "image": "https://i.ebayimg.com/thumbs/images/g/B1wAAOSwdGZcPPAW/s-l225.webp" },
+            { "id": "sports", "name": "Sports", "image": "https://i.ebayimg.com/thumbs/images/g/r5QAAOSw8U9cPPAS/s-l225.webp" },
+            { "id": "sneakers", "name": "Sneakers", "image": "https://i.ebayimg.com/thumbs/images/g/~kMAAOSwwkVdct4L/s-l225.webp" },
+            { "id": "loafers", "name": "Loafers", "image": "https://i.ebayimg.com/thumbs/images/g/5NgAAOSw7VJdct4R/s-l225.webp" },
+            { "id": "boots", "name": "Boots", "image": "https://i.ebayimg.com/thumbs/images/g/AxkAAOSwLKNb0hDY/s-l225.webp" }
           ]
         },
         {
           "id": "watches",
           "name": "Watches",
-          "image1": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Men._SS400_QL85_.jpg",
           "image": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Men._SS400_QL85_.jpg",
           "subcategories": [
-            { "id": "analog", "name": "Analog" },
-            { "id": "digital", "name": "Digital" },
-            { "id": "chronograph", "name": "Chronograph" },
-            { "id": "luxury", "name": "Luxury" },
-            { "id": "sports", "name": "Sports" }
+            { "id": "analog", "name": "Analog", "image": "https://i.ebayimg.com/thumbs/images/g/i9cAAOSwxDVfUOsZ/s-l225.webp" },
+            { "id": "digital", "name": "Digital", "image": "https://i.ebayimg.com/thumbs/images/g/bZgAAOSwyxhfUOsS/s-l225.webp" },
+            { "id": "chronograph", "name": "Chronograph", "image": "https://i.ebayimg.com/thumbs/images/g/dkwAAOSwxlJfUOsV/s-l225.webp" },
+            { "id": "luxury", "name": "Luxury", "image": "https://i.ebayimg.com/thumbs/images/g/tC0AAOSwBqpfUOsy/s-l225.webp" },
+            { "id": "sports", "name": "Sports", "image": "https://i.ebayimg.com/thumbs/images/g/jOQAAOSwG0NfUOsd/s-l225.webp" }
           ]
         },
         {
           "id": "accessories",
           "name": "Accessories",
-          "image1": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Men._SS400_QL85_.jpg",
           "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/sunglasses_unselected._SS300_QL85_FMpng_.png",
           "subcategories": [
-            { "id": "belts", "name": "Belts" },
-            { "id": "ties", "name": "Ties" },
-            { "id": "wallets", "name": "Wallets" },
-            { "id": "hats", "name": "Hats" },
-            { "id": "sunglasses", "name": "Sunglasses" }
+            { "id": "belts", "name": "Belts", "image": "https://i.ebayimg.com/thumbs/images/g/yxMAAOSwZ4dZJXhi/s-l225.webp" },
+            { "id": "ties", "name": "Ties", "image": "https://i.ebayimg.com/thumbs/images/g/QAIAAOSw09Ve7xmP/s-l225.webp" },
+            { "id": "wallets", "name": "Wallets", "image": "https://i.ebayimg.com/thumbs/images/g/ZJUAAOSwJJJe7xmW/s-l225.webp" },
+            { "id": "hats", "name": "Hats", "image": "https://i.ebayimg.com/thumbs/images/g/xZEAAOSw7P1e7xmL/s-l225.webp" },
+            { "id": "sunglasses", "name": "Sunglasses", "image": "https://i.ebayimg.com/thumbs/images/g/3lwAAOSwtP9e7xmV/s-l225.webp" }
           ]
         }
       ]
@@ -190,53 +186,51 @@ export class GlobalConstant {
         {
           "id": "clothing",
           "name": "Clothing",
-          "image1": "https://m.media-amazon.com/images/G/31/img19/Fashion/WA19/Topwear-Store/SBC/updated/tops._SS680_QL85_.jpg",
           "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Women__unselected._SS300_QL85_FMpng_.png",
           "subcategories": [
-            { "id": "dresses", "name": "Dresses" },
-            { "id": "tops", "name": "Tops" },
-            { "id": "skirts", "name": "Skirts" },
-            { "id": "blouses", "name": "Blouses" },
-            { "id": "jumpsuits", "name": "Jumpsuits" }
+            { "id": "dresses", "name": "Dresses", "image": "https://i.ebayimg.com/thumbs/images/g/XsUAAOSwe-5e7xmi/s-l225.webp" },
+            { "id": "tops", "name": "Tops", "image": "https://i.ebayimg.com/thumbs/images/g/cGcAAOSwrHNe7xmi/s-l225.webp" },
+            { "id": "skirts", "name": "Skirts", "image": "https://i.ebayimg.com/thumbs/images/g/FpAAAOSwEfZe7xmZ/s-l225.webp" },
+            { "id": "sweater", "name": "Sweaters", "image": "https://i.ebayimg.com/thumbs/images/g/TEsAAOSwPJxe7xmR/s-l225.webp" },
+            { "id": "jeans", "name": "Jeans", "image": "https://i.ebayimg.com/thumbs/images/g/FPoAAOSwPGNe7xmd/s-l225.webp" },
+            { "id": "jackets", "name": "Jackets", "image": "https://i.ebayimg.com/thumbs/images/g/0V4AAOSwqShe7xmW/s-l225.webp" }
           ]
         },
         {
           "id": "footwear",
           "name": "Footwear",
-          "image1": "https://m.media-amazon.com/images/G/31/img21/shoes/2023/2.0/Women/Halo/Women._CB578759497_.png",
           "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Footwear_unselected._SS300_QL85_FMpng_.png",
           "subcategories": [
-            { "id": "heels", "name": "Heels" },
-            { "id": "flats", "name": "Flats" },
-            { "id": "boots", "name": "Boots" },
-            { "id": "sandals", "name": "Sandals" },
-            { "id": "sneakers", "name": "Sneakers" }
+            { "id": "heels", "name": "Heels", "image": "https://i.ebayimg.com/thumbs/images/g/ERwAAOSwP4ldctrl/s-l225.webp" },
+            { "id": "flats", "name": "Flats", "image": "https://i.ebayimg.com/thumbs/images/g/dTEAAOSwXMBdctwV/s-l225.webp" },
+            { "id": "boots", "name": "Boots", "image": "https://i.ebayimg.com/thumbs/images/g/BygAAOSwlRFdctTE/s-l225.webp" },
+            { "id": "sandals", "name": "Sandals", "image": "https://i.ebayimg.com/thumbs/images/g/qw0AAOSwq9hdcts0/s-l225.webp" },
+            { "id": "sneakers", "name": "Sneakers", "image": "https://i.ebayimg.com/thumbs/images/g/DWAAAOSwq2xcPOv0/s-l225.webp" },
+            { "id": "athletic", "name": "Athletic", "image": "https://i.ebayimg.com/thumbs/images/g/YDoAAOSwKqldctTM/s-l225.webp" }
           ]
         },
         {
           "id": "watches",
           "name": "Watches",
-          "image1": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Women._SS400_QL85_.jpg",
           "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Watches_unselected._SS300_QL85_FMpng_.png",
           "subcategories": [
-            { "id": "designer", "name": "Designer" },
-            { "id": "fashion", "name": "Fashion" },
-            { "id": "smartwatches", "name": "Smartwatches" },
-            { "id": "luxury", "name": "Luxury" },
-            { "id": "fitness", "name": "Fitness" }
+            { "id": "analog", "name": "Analog", "image": "https://i.ebayimg.com/thumbs/images/g/i9cAAOSwxDVfUOsZ/s-l225.webp" },
+            { "id": "digital", "name": "Digital", "image": "https://i.ebayimg.com/thumbs/images/g/bZgAAOSwyxhfUOsS/s-l225.webp" },
+            { "id": "chronograph", "name": "Chronograph", "image": "https://i.ebayimg.com/thumbs/images/g/dkwAAOSwxlJfUOsV/s-l225.webp" },
+            { "id": "luxury", "name": "Luxury", "image": "https://i.ebayimg.com/thumbs/images/g/tC0AAOSwBqpfUOsy/s-l225.webp" },
+            { "id": "sports", "name": "Sports", "image": "https://i.ebayimg.com/thumbs/images/g/jOQAAOSwG0NfUOsd/s-l225.webp" }
           ]
         },
         {
           "id": "accessories",
           "name": "Accessories",
-          "image1": "https://m.media-amazon.com/images/G/31/img21/Watches2023/July/Lux_store/Halos/Final/DOTD_Women._SS400_QL85_.jpg",
           "image": "https://m.media-amazon.com/images/G/31/img23/Fashion/Event/JuneWRS/eventpage/HALOS/Jewellery_unselected._SS300_QL85_FMpng_.png",
           "subcategories": [
-            { "id": "handbags", "name": "Handbags" },
-            { "id": "jewelry", "name": "Jewelry" },
-            { "id": "scarves", "name": "Scarves" },
-            { "id": "hats", "name": "Hats" },
-            { "id": "sunglasses", "name": "Sunglasses" }
+            { "id": "handbags", "name": "Handbags", "image": "https://i.ebayimg.com/thumbs/images/g/riUAAOSw01dZpnCJ/s-l225.webp" },
+            { "id": "jewelry", "name": "Jewelry", "image": "https://i.ebayimg.com/thumbs/images/g/DrQAAOSwDuJW0vOw/s-l225.webp" },
+            { "id": "scarves", "name": "Scarves", "image": "https://i.ebayimg.com/thumbs/images/g/kpcAAOSwSMZe7xmL/s-l225.webp" },
+            { "id": "hats", "name": "Hats", "image": "https://i.ebayimg.com/thumbs/images/g/17sAAOSwGJlZJXh1/s-l225.webp" },
+            { "id": "sunglasses", "name": "Sunglasses", "image": "https://i.ebayimg.com/thumbs/images/g/Bf8AAOSwTi1baBMc/s-l225.webp" }
           ]
         }
       ]

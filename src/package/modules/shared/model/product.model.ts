@@ -43,12 +43,12 @@ export interface CategoryList {
 export interface Subcategory {
   id: string
   name: string
-  image1: string
   image: string
-  subcategories: Subcategory2[]
+  subcategories: Subsubcategory[]
 }
 
-export interface Subcategory2 {
+export interface Subsubcategory {
   id: string
-  name: string
+  name: string,
+  image: string
 }

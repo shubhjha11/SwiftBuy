@@ -2,13 +2,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Subsubcategory } from 'src/package/modules/shared/model/product.model';
 
 @Component({
-  selector: 'app-sub-category-list',
-  templateUrl: './sub-category-list.component.html'
+  selector: 'app-sub-category-list-carousel',
+  templateUrl: './sub-category-list-carousel.component.html',
+  styles: [
+  ]
 })
-export class SubCategoryListComponent implements OnInit {
+export class SubCategoryListCarouselComponent implements OnInit {
 
   @Input() subCategories: Subsubcategory[] | undefined;
-  @Input() selectedCategory: Subsubcategory | undefined;
   @Output() categorySelected = new EventEmitter<Subsubcategory>();
   constructor() { }
 
@@ -18,5 +19,4 @@ export class SubCategoryListComponent implements OnInit {
   onCategorySelect(subCategory: Subsubcategory) {
     this.categorySelected.emit(subCategory);
   }
-
 }

@@ -1,6 +1,8 @@
-<h3 class="mb-3">Shop by Sub-Category</h3>
-<mat-selection-list #shoes multiple="false">
-  <mat-list-option *ngFor="let subCategory of subCategories">
+<h3 class="mb-3">Shop by Category</h3>
+<mat-selection-list #shoes multiple="false" >
+  <mat-list-option (click)="onCategorySelect(subCategory)"
+      *ngFor="let subCategory of subCategories"
+      [selected]="subCategory.id == selectedCategory?.id">
     {{subCategory.name}}
   </mat-list-option>
 </mat-selection-list>

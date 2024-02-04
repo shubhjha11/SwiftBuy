@@ -21,6 +21,7 @@ const routes: Routes = [
       { path: 'cart', component: CartComponent },
       { path: 'product/:id', component: ProductDetailsComponent },
       { path: 'category/:id1/:id2/:id3', component: CategoryComponent },
+      { path: 'category/:id1/:id2', component: CategoryComponent },
     ]
   },
   { 

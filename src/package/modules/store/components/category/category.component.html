@@ -1,20 +1,36 @@
 <div class="container-fluid">
   <div class="row gx-4">
-    <h1 class="col-md-12 py-3 mb-3 border-bottom">{{ categoryName }}</h1>
+    <h1 class="col-md-12 py-3 mb-3 border-bottom">{{ selectedMainCategory?.name }}'s {{ selectedCategory?.name }}</h1>
     <!-- left side will be the subcategory -->
     <div class="col-md-3 border-end">
       <!-- Sub-Category List -->
-      <app-sub-category-list [subCategories]="subCategories"></app-sub-category-list>
-
+      <app-sub-category-list 
+          [subCategories]="selectedCategory?.subcategories"
+          [selectedCategory]="selectedSubCategory"
+          (categorySelected)="onCategorySelect($event)">
+      </app-sub-category-list>
       <hr>
-      <!-- Filters -->
-      <app-product-filters></app-product-filters>
+
+      <ng-container *ngIf="selectedSubCategory">
+        <!-- Filters -->
+        <app-product-filters></app-product-filters>
+      </ng-container>
     </div>
     <!-- right side will be the products list -->
     <div class="col-md-9 pb-80 position-relative">
+      
+      <ng-container *ngIf="!selectedSubCategory">
+        <!-- Category List Carousel -->
+        <app-sub-category-list-carousel 
+            [subCategories]="selectedCategory?.subcategories"
+            (categorySelected)="onCategorySelect($event)">
+        </app-sub-category-list-carousel>
+        <hr>
+      </ng-container>
+      
       <!-- Sort Product -->
       <div class="d-flex justify-content-between p-2">
-        <h2>Results</h2>
+        <h2>All Results</h2>
         <button [matMenuTriggerFor]="sortMenu">
           <span class="h3 me-3">Sort By</span>          
           <fa-icon [icon]="['fas', 'sort']"></fa-icon>
@@ -25,7 +41,8 @@
         </mat-menu>
       </div>
       <hr>
-      <!-- Produt list -->
+
+      <!-- Product list -->
       <app-product-list [products]="productList"></app-product-list>
 
       <!-- Pagination -->

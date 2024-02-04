@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   public isLogin: boolean = false;
   public isAdmin: boolean = true;
-  public categoriesList = this.globalConstant.categoriesList;
+  public categoriesList: CategoryList[] = this.globalConstant.categoriesList;
   public menCategoryList!: CategoryList[];
   public womenCategoryList!: CategoryList[];
   constructor(
@@ -22,5 +22,4 @@ export class HeaderComponent implements OnInit {
     this.menCategoryList = this.categoriesList.filter(cat => cat.id == 'men');
     this.womenCategoryList = this.categoriesList.filter(cat => cat.id == 'women');
   }
-
 }

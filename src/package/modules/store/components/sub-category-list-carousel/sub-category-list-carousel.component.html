@@ -1,0 +1,9 @@
+<h3 class="mb-3">Shop by Category</h3>
+<div class="card-container vertical-scroll">
+  <div class="card" *ngFor="let category of subCategories" (click)="onCategorySelect(category)">
+    <img src="{{category.image}}" class="card-img-top img-fluid rounded-5" alt="{{category.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{category.name}}</h5>
+    </div>
+  </div>
+</div>
