@@ -92,7 +92,12 @@
       <li class="menu-item" title="Profile" [matMenuTriggerFor]="profileMenu" *ngIf="!isLogin">
         <fa-icon [icon]="['fas', 'user-circle']"></fa-icon>
       </li>
-      <li class="menu-item" routerLink="/cart" title="Cart">
+      <li class="menu-item" 
+          routerLink="/cart" 
+          title="Cart" 
+          [matBadge]="cartItems > 0 ? cartItems: ''"
+          matBadgeSize="small"
+          matBadgeColor="warn">
         <fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>
       </li>
     </div>

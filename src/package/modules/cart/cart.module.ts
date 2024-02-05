@@ -5,6 +5,7 @@ import { CartItemsComponent } from './components/cart-items/cart-items.component
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { SharedModule } from '../shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule,
   ]
 })
 export class CartModule { }

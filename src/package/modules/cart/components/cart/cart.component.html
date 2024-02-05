@@ -1,32 +1,47 @@
 <div class="container-fluid">
-  <div class="row p-4">
+  <div class="row p-4" *ngIf="cartItems.length > 0">
     <div class="col-md-9 border-end">
-      <app-cart-items></app-cart-items>
+      <app-cart-items [cartItems]="cartItems"></app-cart-items>
     </div>
     <div class="col-md-3">
       <h1>Price Details</h1>
       <hr>
       <div class="d-flex justify-content-between my-2">
-        <div>Price (1 item)</div>
-        <div>₹1,299</div>
+        <div>Price ({{cartItems.length}} item)</div>
+        <div>{{ totalMrpAmount | currency : 'INR' : 'symbol' : '1.2-2'}}</div>
       </div>
       <div class="d-flex justify-content-between my-2">
         <div>Discount</div>
-        <div>- ₹450</div>
+        <div>- {{ totalDiscount | currency : 'INR' : 'symbol' : '1.2-2'}}</div>
       </div>
       <div class="d-flex justify-content-between my-2">
         <div>Delivery Charges</div>
-        <div><span class="text-decoration-line-through">₹40</span>Free</div>
+        <div *ngIf="deliveryCharge == 0">
+          <span class="text-decoration-line-through">{{ DELIVERY_CHARGE | currency : 'INR' : 'symbol' : '1.2-2'}}</span>
+          <span class="text-success"> Free</span>
+        </div>
+        <div *ngIf="deliveryCharge > 0">{{deliveryCharge | currency : 'INR' : 'symbol' : '1.2-2'}}</div>
       </div>
       <hr>
-      <div class="d-flex justify-content-between mt-2 mb-4">
-        <div>Total Amount</div>
-        <div>₹849</div>
+      <div class="d-flex justify-content-between my-2">
+        <div class="fw-semibold">Total Amount</div>
+        <div>{{ totalDiscountedAmount | currency : 'INR' : 'symbol' : '1.2-2'}}</div>
       </div>
+      <hr>
+      <div class="text-success fw-semibold mb-2">You will save {{(totalDiscount - deliveryCharge) | currency : 'INR' : 'symbol' : '1.2-2'}} on this order</div>
       <button class="button button--primary w-100">
         <fa-icon class="me-2" [icon]="['fas', 'shopping-bag']"></fa-icon>
         Buy now
       </button>
     </div>
   </div>
+
+  <ng-container *ngIf="cartItems.length == 0">
+    <div class="login-page ">
+      <h1 class="mb-4">You don't have any items in your cart.</h1>
+      <h2 class="mb-4">Have an account? <a class="link" [routerLink]="'/login'">Sign in</a> to see your items</h2>
+      <div class="mb-4">OR</div>
+      <button class="button button--primary" [routerLink]="'/'">Continue Shopping</button>
+    </div>
+  </ng-container>
 </div>

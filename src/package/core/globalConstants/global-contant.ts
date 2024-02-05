@@ -4,7 +4,7 @@ import { CategoryList, Product } from "src/package/modules/shared/model/product.
 @Injectable()
 export class GlobalConstant {
 
-  demoProductList = [
+  demoProductList: Product[] = [
     {
       "productImages": [
         { image: "https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/r/j/e/-original-imagmuc8gfb7heya.jpeg?q=70" },
@@ -20,7 +20,7 @@ export class GlobalConstant {
       "title": "HURRICANE Running Shoes For Men  (White)",
       "id": 1,
       "color": "White",
-      "price": 889,
+      "price": 895,
       "mrp": 1399,
       "discount": 36,
       "size": [
@@ -58,7 +58,7 @@ export class GlobalConstant {
       "title": "Super Speed Running Shoes For Men  (Grey)",
       "id": 2,
       "color": "Grey",
-      "price": 1231,
+      "price": 1249,
       "mrp": 2499,
       "discount": 50,
       "size": [

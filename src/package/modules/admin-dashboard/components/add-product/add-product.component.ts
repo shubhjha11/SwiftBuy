@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@
 import { FormBuilder, FormGroup, UntypedFormArray, UntypedFormGroup, Validators } from '@angular/forms';
 import { GlobalConstant } from 'src/package/core/globalConstants/global-contant';
 import { SnackbarService } from 'src/package/core/services/snackbar.service';
-import { ProductFinal } from 'src/package/modules/shared/model/product.model';
+import { Product } from 'src/package/modules/shared/model/product.model';
 
 @Component({
   selector: 'app-add-product',
@@ -15,7 +15,7 @@ export class AddProductComponent implements OnInit {
   public selectedTopLevelCategory: any;
   public selectedSecondLevelCategory: any;
   @Output() addProductAction = new EventEmitter<any>();
-  @Input() selectedProduct: ProductFinal[] = [];
+  @Input() selectedProduct: Product[] = [];
 
   constructor(
     private fb: FormBuilder,

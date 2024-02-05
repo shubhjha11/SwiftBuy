@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Route, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { GlobalConstant } from 'src/package/core/globalConstants/global-contant';
-import { CategoryList, ProductFinal, Subcategory, Subsubcategory } from 'src/package/modules/shared/model/product.model';
+import { CategoryList, Product, Subcategory, Subsubcategory } from 'src/package/modules/shared/model/product.model';
 
 @Component({
   selector: 'app-category',
@@ -11,7 +11,7 @@ import { CategoryList, ProductFinal, Subcategory, Subsubcategory } from 'src/pac
 })
 export class CategoryComponent implements OnInit {
 
-  public productList: ProductFinal[] = [];
+  public productList: Product[] = [];
   public selectedMainCategory!: CategoryList | undefined; //
   public selectedCategory!: Subcategory | undefined;
   public selectedSubCategory!: Subsubcategory | undefined;
@@ -64,7 +64,7 @@ export class CategoryComponent implements OnInit {
     return this.productList.filter(product => product.topLevelCategory === category && product.thirdLevelCategory === subCategory);
   }
 
-  getAllProducts(): ProductFinal[] {
+  getAllProducts(): Product[] {
     return this.globalConstant.demoProductList;
   }
 

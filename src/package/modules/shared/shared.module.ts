@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CategoryProductSliderComponent } from './components/category-product-slider/category-product-slider.component';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { ImageZoomDirective } from './directives/image-zoom.directive';
 import { PaginationComponent } from './components/pagination/pagination.component';
 

@@ -1,14 +1,4 @@
 export interface Product {
-  name: string;
-  images: string[];
-  description: string;
-  price: string;
-  brand: string;
-  productId: number;
-  subCategory: string;
-  category: string;
-}
-export interface ProductFinal {
   productImages: ProductImage[];
   id: number,
   brand: string;
@@ -35,20 +25,28 @@ export interface ProductImage {
 }
 
 export interface CategoryList {
-  id: string
-  name: string
+  id: string;
+  name: string;
   subcategories: Subcategory[]
 }
 
 export interface Subcategory {
-  id: string
-  name: string
-  image: string
-  subcategories: Subsubcategory[]
+  id: string;
+  name: string;
+  image: string;
+  subcategories: Subsubcategory[];
 }
 
 export interface Subsubcategory {
-  id: string
-  name: string,
-  image: string
+  id: string;
+  name: string;
+  image: string;
+}
+
+export interface CartItem {
+  id: number;
+  product: Product;
+  quantity: number;
+  totalPrice: number;
+  totalDiscount: number;
 }

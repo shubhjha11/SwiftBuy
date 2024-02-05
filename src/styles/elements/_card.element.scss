@@ -69,17 +69,5 @@
         transform: scale(1.05);
       }
     }
-
-    .favourite-icon {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      cursor: pointer;
-      color: $color--lightgrey;
-
-      .svg-inline--fa {
-        font-size: 1.5rem;
-      }
-    }
   }
 }
