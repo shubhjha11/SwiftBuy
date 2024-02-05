@@ -12,7 +12,7 @@
     </div>
     <div class="col-md-5 position-relative">
       <img class="img-fluid image-contain" src="{{ selectedImage.image }}">
-      <fa-icon class="favourite-icon active"
+      <fa-icon class="favourite-icon"
           [icon]="['fas', 'heart']">
       </fa-icon>
     </div>
@@ -35,7 +35,7 @@
         <div class="col-md-6" *ngIf="isProductInCart()">
           <button class="button button--tertiary w-100" (click)="goToCart()">
             <fa-icon class="me-2" [icon]="['fas', 'shopping-cart']"></fa-icon>
-            Go to cart
+            View in cart
           </button>
         </div>
         <div class="col-md-6">

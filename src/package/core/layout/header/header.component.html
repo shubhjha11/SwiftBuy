@@ -5,8 +5,7 @@
       <span class="swift-color">swift</span>buy
     </div>
     <div class="nav-menu dropdown">
-      <div class="menu-item dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-        data-bs-auto-close="true">
+      <div class="menu-item dropdown-toggle">
         Men
       </div>
       <div class="dropdown-menu navbar-menu">
@@ -32,8 +31,7 @@
       </div>
     </div>
     <div class="nav-menu dropdown">
-      <div class="menu-item dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-        data-bs-auto-close="true">
+      <div class="menu-item dropdown-toggle">
         Women
       </div>
       <div class="dropdown-menu navbar-menu">
@@ -92,13 +90,12 @@
       <li class="menu-item" title="Profile" [matMenuTriggerFor]="profileMenu" *ngIf="!isLogin">
         <fa-icon [icon]="['fas', 'user-circle']"></fa-icon>
       </li>
-      <li class="menu-item" 
-          routerLink="/cart" 
-          title="Cart" 
-          [matBadge]="cartItems > 0 ? cartItems: ''"
-          matBadgeSize="small"
-          matBadgeColor="warn">
-        <fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>
+      <li class="menu-item" routerLink="/cart" title="Cart">
+        <fa-icon [icon]="['fas', 'shopping-cart']" 
+            [matBadge]="cartItems > 0 ? cartItems: ''"
+            matBadgeSize="small"
+            matBadgeColor="warn">
+        </fa-icon>
       </li>
     </div>
   </ul>
