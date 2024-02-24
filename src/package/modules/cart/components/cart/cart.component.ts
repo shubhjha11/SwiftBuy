@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { CartItem, Product } from 'src/package/modules/shared/model/product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -16,7 +17,8 @@ export class CartComponent implements OnInit {
   public totalDiscountedAmount: number = 0;
   public deliveryCharge: number = 40;
   constructor(
-    private cartService: CartService
+    private cartService: CartService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -56,6 +58,10 @@ export class CartComponent implements OnInit {
     this.totalDiscount = this.cartItems.reduce((acc, item) => {
       return acc + item.totalDiscount;
     }, 0);
+  }
+
+  public goToCheckout(): void {
+    this.router.navigate(['/checkout']);
   }
 
 }

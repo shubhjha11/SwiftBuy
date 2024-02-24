@@ -1,1 +1,80 @@
-<p>checkout works!</p>
+<div class="container-fluid">
+  <nav class="navbar">
+    <div class="left-navigation">
+      <div class="logo" routerLink="/">
+        <fa-icon [icon]="['fas', 'store']"></fa-icon>
+        <span class="swift-color">swift</span>buy
+      </div>
+    </div>
+    <h3>Checkout</h3>
+  </nav>
+  <div class="row p-4">
+    <div class="col-md-9">
+      <mat-accordion>
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Your addresses
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <div *ngFor="let addr of address">
+            <mat-radio-group [(ngModel)]="selectedAddress">
+              <mat-radio-button [value]="addr">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>{{ addr.name }}, </strong>
+                    <span>{{ addr.address }}, </span>
+                    <span>{{ addr.city }}, {{ addr.state }} - {{ addr.pincode }}</span>
+                    <span>{{ addr.mobile }}</span>
+                  </div>
+                  <div>
+                    <button mat-button color="primary">Edit</button>
+                  </div>
+                </div>
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <mat-action-row>
+            <button mat-button color="primary" (click)="nextStep()">Use this Address</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Payment Method
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+      
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Use this Payment Method</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      
+        <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Items and delivery
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+      
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Confirm and Place Order</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      
+      </mat-accordion>
+    </div>
+    <div class="col-md-3">
+      <h3>Order Summary</h3>
+      <hr>
+      <div class="d-flex justify-content-between my-2">
+        <div>Order Total:</div>
+        <div>₹11,999</div>
+      </div>
+    </div>
+  </div>
+</div>

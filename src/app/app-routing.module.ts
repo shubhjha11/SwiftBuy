@@ -8,6 +8,7 @@ import { SignupComponent } from 'src/package/modules/authentication/components/s
 import { CartComponent } from 'src/package/modules/cart/components/cart/cart.component';
 import { ProductDetailsComponent } from 'src/package/modules/store/components/product-details/product-details.component';
 import { CategoryComponent } from 'src/package/modules/store/components/category/category.component';
+import { CheckoutComponent } from 'src/package/modules/cart/components/checkout/checkout.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'category/:id1/:id2', component: CategoryComponent },
     ]
   },
+  { path: 'checkout', component: CheckoutComponent},
   { 
     path: 'admin',
     component: LayoutComponent,

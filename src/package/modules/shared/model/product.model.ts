@@ -50,3 +50,13 @@ export interface CartItem {
   totalPrice: number;
   totalDiscount: number;
 }
+
+export interface Address {
+  name: string;
+  mobile: string;
+  pincode: string;
+  address: string;
+  city: string;
+  state: string;
+  isDefault: boolean;
+}

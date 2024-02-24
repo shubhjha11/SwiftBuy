@@ -74,3 +74,21 @@
     margin-bottom: 0.5rem;
   }
 }
+
+// Mat-expansion-panel styling
+.mat-expansion-panel {
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+
+  .mat-expansion-panel-header {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-bottom: 1px solid $color--lightgrey;
+    background-color: $color--lightgrey;
+    height: 50px;
+    border-radius: 0;
+    pointer-events: none;
+  } 
+}

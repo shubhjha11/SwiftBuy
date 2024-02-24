@@ -38,18 +38,12 @@
             View in cart
           </button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" [routerLink]="'/checkout'">
           <button class="button button--primary w-100">
             <fa-icon class="me-2" [icon]="['fas', 'shopping-bag']"></fa-icon>
             Buy now
           </button>
         </div>
-        <!-- <div class="col-md-6">
-          <button class="button button--secondary w-100">
-            <fa-icon [icon]="['fas', 'heart']"></fa-icon>
-            Add to wishlist
-          </button>          
-        </div> -->
       </div>
       <hr>
       <div class="accordion" id="accordionDescription">
